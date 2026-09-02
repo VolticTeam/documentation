@@ -113,9 +113,10 @@
   },
   "contextual": {
     "options": [
-      "copy",
       "chatgpt",
-      "claude"
+      "claude",
+      "download-pdf",
+      "copy"
     ],
     "display": "header"
   },
