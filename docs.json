@@ -118,5 +118,8 @@
       "claude"
     ],
     "display": "header"
+  },
+  "interaction": {
+    "drilldown": true
   }
 }
