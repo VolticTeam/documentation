@@ -15,7 +15,11 @@
     "links": [
       {
         "href": "https://app.voltic.es",
-        "label": "Plataforma Voltic"
+        "label": "Ir a la app"
+      },
+      {
+        "href": "https://voltic.es",
+        "label": "Ir a la web"
       }
     ],
     "primary": {
