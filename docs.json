@@ -103,5 +103,16 @@
   },
   "search": {
     "prompt": "Buscar..."
+  },
+  "markdown": {
+    "schema": true
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "chatgpt",
+      "claude"
+    ],
+    "display": "header"
   }
 }
