@@ -1,0 +1,56 @@
+---
+title: "Requisitos previos a la instalación Voltic"
+sidebarTitle: "Requisitos"
+description: "Verifica los requisitos eléctricos, de red, documentación y kits antes de instalar los dispositivos Voltic en el hotel."
+---
+
+Antes de comenzar cualquier instalación, asegúrate de que se cumplen todos los requisitos de esta página. Una preparación adecuada evita errores durante el montaje y garantiza la conectividad de todos los dispositivos.
+
+## Documentación previa
+
+<Note>
+  Asegúrate de tener los siguientes documentos validados antes de iniciar:
+</Note>
+
+- Planos actualizados con la ubicación de hubs y repetidores (si aplica)
+- Esquema de instalación Voltic
+- Numeración de habitaciones coincidente con el kit Voltic
+
+## Requisitos eléctricos
+
+Puntos de alimentación 230V definidos por dispositivo:
+
+- **Voltic FrostLine** se conecta a la línea 24h (no puede estar controlada por tarjetero ni contactor)
+- **Voltic Switch** se conecta en el cuadro eléctrico de la habitación
+
+## Requisitos de red y Zigbee
+
+### Red de datos
+
+- Toma de red **RJ45 (macho)** para cada Hub
+- **Switch PoE** o enchufe con corriente 24/7 para cada Hub
+
+### Cobertura Wi-Fi y Zigbee
+
+<Warning>
+  **Deja libre el canal 11 de la red Wi-Fi del hotel.** El sistema Zigbee de Voltic opera en la banda de 2,4 GHz, en la misma frecuencia que el canal 11 de Wi-Fi. Asegúrate de que las APs del hotel no utilicen ese canal para minimizar interferencias y garantizar la estabilidad de la red Voltic.
+</Warning>
+
+- Alimentación 24/7 para cada repetidor Zigbee
+
+## Verificación de kit por habitación
+
+<Warning>
+  Cada kit está **preconfigurado para una habitación concreta**. No puede intercambiarse con otro kit.
+</Warning>
+
+- Cada caja debe tener una etiqueta con el **número de habitación** correspondiente
+- No instales dispositivos en una habitación que no coincida con la numeración del kit
+
+![Voltic Freeline Kit](https://r2.voltic.es/media/installation-docs-assets/devices/freeline/verificacion-kit-freeline.webp)
+
+## Siguiente paso
+
+Una vez verificados todos los requisitos, empieza por instalar el VolticHub y los repetidores Zigbee:
+
+- [Instalar el VolticHub y repetidores Zigbee](/instalacion/voltichub-repetidores)
