@@ -100,5 +100,8 @@
   },
   "seo": {
     "indexing": "all"
+  },
+  "search": {
+    "prompt": "Buscar..."
   }
 }
