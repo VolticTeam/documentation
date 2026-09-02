@@ -1,0 +1,87 @@
+---
+title: "Modos de funcionamiento: ECO y CONFORT"
+sidebarTitle: "Modos ECO y CONFORT"
+description: "Aprende a configurar y usar los modos ECO y CONFORT del sistema Voltic para optimizar el ahorro energético y el confort del huésped en el hotel."
+---
+
+El sistema Voltic Smart Room Control dispone de dos modos de operación que ajustan automáticamente el comportamiento de la climatización según la ocupación de la habitación: el modo ECO y el modo CONFORT.
+
+<Note>
+  El correcto funcionamiento del sistema depende de: instalación adecuada del sistema, configuración inicial correcta y uso operativo adecuado por parte del hotel. Los valores de ahorro energético son estimaciones basadas en condiciones operativas estándar y pueden variar según el tipo de edificio, la orientación de las habitaciones, las condiciones climáticas, los hábitos de uso de los huéspedes y la configuración operativa del hotel.
+</Note>
+
+## Condición común a ambos modos
+
+<Warning>
+  Tanto el modo ECO como el modo CONFORT requieren que la **ventana permanezca cerrada** para que el termostato pueda operar. Si se detecta una ventana abierta, la climatización se desactiva automáticamente según el tiempo configurado en Panel de Control, dentro de Automatizaciones, en Tiempos de Automatización, en la sección Ventana.
+</Warning>
+
+![Configuración de tiempos de automatización — Ventana](https://r2.voltic.es/media/guia-buenas-practicas/control-panel/control-panel-window.webp)
+
+## Modo ECO
+
+El modo ECO prioriza la **eficiencia energética**, reduciendo el funcionamiento de la climatización cuando la habitación no está ocupada. Es el **modo recomendado para la operación habitual del hotel**.
+
+### Funcionamiento
+
+El sistema detecta la ausencia del huésped mediante sensores. Si no se detecta presencia durante **5 minutos**, el aire acondicionado se apaga automáticamente. Este intervalo puede modificarse desde Panel de Control, en Automatizaciones, en Tiempos de Automatización, en la sección Presencia.
+
+![Configuración de tiempos de automatización — Presencia](https://r2.voltic.es/media/guia-buenas-practicas/control-panel/control-panel-pir.webp)
+
+<Note>
+  A diferencia del modo CONFORT, el modo ECO no mantiene una temperatura de consigna cuando la habitación está vacía. La climatización se apaga completamente.
+</Note>
+
+### Configuración
+
+**Configuración centralizada** (para múltiples habitaciones desde el Panel de Control):
+
+![Activación del modo ECO — configuración centralizada](https://r2.voltic.es/media/guia-buenas-practicas/control-panel/control-panel-eco.webp)
+
+**Configuración individual** (desde el panel de inteligencia de cada habitación):
+
+![Activación del modo ECO — configuración individual](https://r2.voltic.es/media/guia-buenas-practicas/room/room-eco-mode.webp)
+
+### Beneficios
+
+- Reduce el consumo energético en habitaciones desocupadas
+- Automatiza el apagado de la climatización según la ocupación
+- Mejora la eficiencia energética global del hotel
+
+---
+
+## Modo CONFORT
+
+El modo CONFORT prioriza el **bienestar térmico del huésped**, manteniendo la habitación dentro de un rango de temperatura confortable incluso cuando no hay presencia detectada.
+
+### Funcionamiento
+
+Cuando el huésped abandona la habitación, la climatización permanece activa siempre que la ventana esté cerrada. El sistema mantiene una **temperatura de confort predefinida de 24°C**.
+
+### Configuración
+
+**Configuración grupal** (desde Panel de Control, en Automatizaciones, en Temperatura de confort):
+
+![Configuración del modo CONFORT — configuración grupal](https://r2.voltic.es/media/guia-buenas-practicas/control-panel/control-panel-confort.webp)
+
+**Configuración individual** (desde el panel de inteligencia de cada habitación):
+
+![Configuración del modo CONFORT — configuración individual](https://r2.voltic.es/media/guia-buenas-practicas/room/room-confort-mode.webp)
+
+### Rangos de temperatura recomendados
+
+| Modo | Temperatura recomendada |
+| --- | --- |
+| Calefacción | 21°C - 23°C |
+| Refrigeración | 24°C - 26°C |
+
+### Cuándo usarlo
+
+Recomendado para habitaciones con alta exposición solar, en periodos de temperaturas exteriores elevadas, o cuando quieres evitar el "efecto fogonazo": el huésped regresa a una habitación excesivamente caliente.
+
+---
+
+## Artículos relacionados
+
+- [Temperaturas recomendadas](/operacion/temperaturas-recomendadas)
+- [Cómo funcionan los sensores](/operacion/sensores)

@@ -1,0 +1,69 @@
+---
+title: "Instalar el Voltic Switch (Contactor Zigbee)"
+sidebarTitle: "Voltic Switch"
+description: "Instala el contactor inteligente Voltic Switch en el cuadro eléctrico de la habitación para controlar iluminación y TV por presencia."
+---
+
+El Voltic Switch es un contactor inteligente Zigbee con medición de consumo eléctrico. Sustituye al tarjetero tradicional y alimenta directamente las sublíneas de TV e iluminación. Se activa y desactiva de forma automática según la presencia detectada por los sensores PIR.
+
+## Especificaciones técnicas
+
+| Parámetro | Valor |
+| --- | --- |
+| Tensión nominal | 230 VAC 50 Hz |
+| Corriente máxima | 40 A |
+| Temperatura de trabajo | 5°C - 35°C |
+| Protección | IP20 |
+| Polos | 1P + N |
+| Tamaño | 18 mm (1 módulo DIN) |
+| Montaje | Carril DIN 35 mm |
+| Norma socket | DIN GB10931 / IEC60898 |
+
+## Dónde instalarlo
+
+Instala el Voltic Switch en el **cuadro eléctrico de la habitación** o en una zona técnica accesible, justo tras el térmico de la línea general, en la línea de salida a TV + iluminación.
+
+## Conexión y cableado
+
+- **Entrada 230V:** desde el térmico 24h
+- **Salida 230V:** a las sublíneas de iluminación y TV
+- **Control:** señal Zigbee desde el VolticHub
+
+El Voltic Switch incluye medición en tiempo real de:
+
+- Potencia activa y reactiva
+- Factor de potencia
+- Consumo histórico
+
+![Voltic Switch - Esquema de conexión](https://r2.voltic.es/media/installation-docs-assets/devices/switch/switch_scheme.webp)
+
+## Fijación
+
+Monta el Voltic Switch en el **carril DIN estándar** del cuadro eléctrico. Asegura una presión adecuada y una fijación firme.
+
+## Ejemplo de instalación
+
+![Voltic Switch - Instalación en cuadro eléctrico](https://r2.voltic.es/media/installation-docs-assets/devices/switch/switch_cuadro.webp)
+
+## Comprobación tras la instalación
+
+<Steps>
+  <Step title="Verifica la entrada de 230V">
+    Comprueba con un multímetro que llegan 230V a los bornes de entrada del contactor.
+  </Step>
+  <Step title="Verifica la salida según señal de activación">
+    Comprueba que la salida responde correctamente cuando el sistema envía la señal de activación.
+  </Step>
+  <Step title="Simula presencia">
+    Activa manualmente el sensor de presencia y confirma que el Voltic Switch habilita la línea de alumbrado.
+  </Step>
+  <Step title="Verifica sincronización en la plataforma">
+    Accede a [app.voltic.es](https://app.voltic.es) y confirma que el dispositivo aparece sincronizado y reporta el estado correcto.
+  </Step>
+</Steps>
+
+## Artículos relacionados
+
+- [Instalar el Voltic FrostLine](/instalacion/voltic-frostline)
+- [Sensores de presencia PIR](/instalacion/sensores-presencia)
+- [Manuales técnicos](/instalacion/manuales-tecnicos)
