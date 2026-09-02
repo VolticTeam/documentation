@@ -92,5 +92,13 @@
         ]
       }
     ]
+  },
+  "integrations": {
+    "ga4": {
+      "measurementId": "G-R1LD7EXVWZ"
+    }
+  },
+  "seo": {
+    "indexing": "all"
   }
 }
