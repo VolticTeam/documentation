@@ -2,9 +2,9 @@
   "theme": "almond",
   "name": "Voltic Centro de Ayuda",
   "colors": {
-    "primary": "#00B5BE",
-    "light": "#00CDD8",
-    "dark": "#008F96"
+    "primary": "#09C3F9",
+    "light": "#B8EDFF",
+    "dark": "#0A2540"
   },
   "logo": {
     "light": "https://cdn.voltic.es/media/logos/logo_cian.svg",
