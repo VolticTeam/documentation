@@ -1,0 +1,96 @@
+{
+  "theme": "almond",
+  "name": "Voltic Centro de Ayuda",
+  "colors": {
+    "primary": "#00B5BE",
+    "light": "#00CDD8",
+    "dark": "#008F96"
+  },
+  "logo": {
+    "light": "https://cdn.voltic.es/media/logos/logo_cian.svg",
+    "dark": "https://cdn.voltic.es/media/logos/logo_cian.svg"
+  },
+  "favicon": "https://cdn.voltic.es/media/logos/logo_cian.svg",
+  "navbar": {
+    "links": [
+      {
+        "href": "https://app.voltic.es",
+        "label": "Plataforma Voltic"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Contactar soporte",
+      "href": "mailto:soporte@voltic.es"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://twitter.com/voltic_es",
+      "github": "https://github.com/VolticTeam",
+      "linkedin": "https://es.linkedin.com/company/voltic-es"
+    }
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Inicio",
+        "icon": "house",
+        "pages": [
+          "index"
+        ]
+      },
+      {
+        "group": "Primeros pasos",
+        "icon": "rocket",
+        "pages": [
+          "primeros-pasos/index",
+          "primeros-pasos/como-funciona"
+        ]
+      },
+      {
+        "group": "Guías de instalación",
+        "icon": "screwdriver-wrench",
+        "pages": [
+          "instalacion/index",
+          "instalacion/requisitos",
+          "instalacion/voltichub-repetidores",
+          "instalacion/voltic-switch",
+          "instalacion/voltic-frostline",
+          "instalacion/sensores-contacto",
+          "instalacion/sensores-presencia",
+          "instalacion/manuales-tecnicos"
+        ]
+      },
+      {
+        "group": "Cooling Patrol",
+        "icon": "snowflake",
+        "pages": [
+          "cooling-patrol/index",
+          "cooling-patrol/instalacion"
+        ]
+      },
+      {
+        "group": "Operación y buenas prácticas",
+        "icon": "chart-line",
+        "pages": [
+          "operacion/index",
+          "operacion/modos-funcionamiento",
+          "operacion/temperaturas-recomendadas",
+          "operacion/sensores"
+        ]
+      },
+      {
+        "group": "Soporte",
+        "icon": "headset",
+        "pages": [
+          "soporte/faq",
+          "soporte/contacto"
+        ]
+      }
+    ]
+  }
+}
