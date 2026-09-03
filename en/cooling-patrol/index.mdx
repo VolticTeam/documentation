@@ -4,16 +4,44 @@ sidebarTitle: "Overview"
 description: "Cooling Patrol is the Voltic system for monitoring the temperature of cold rooms and commercial refrigeration spaces."
 ---
 
-Cooling Patrol is the Voltic solution for wireless temperature monitoring in cold rooms, commercial refrigerators, and other refrigeration spaces. Sensors report temperature in real time through the [app.voltic.es](https://app.voltic.es) platform, where you can configure alerts and review history.
+Cooling Patrol is the Voltic solution for wireless temperature monitoring in cold rooms, commercial refrigerators, and other refrigeration spaces. Sensors send readings to the [app.voltic.es](https://app.voltic.es) platform, where you can review room status, configure alerts, check history, and prepare the HACCP record.
+
+<Note>
+  The screen names in this guide match the current interface. They may vary by user role, app version, or building configuration. The [installation guide](/en/cooling-patrol/installation) keeps the setup and connection procedure.
+</Note>
 
 ## System components
 
-- **Cooling Patrol Hub** (connects via Ethernet or Wi-Fi)
-- **Cooling Patrol temperature sensors** (wireless, installed inside each cold room)
+| Component | Function |
+| --- | --- |
+| **Cooling Patrol Hub** | Receives sensor data and sends readings over Ethernet or Wi‑Fi. |
+| **Cooling Patrol temperature sensors** | Measure the temperature inside each cold room and, when provided by the device, show humidity and battery status. |
+| **app.voltic.es** | Shows the overview, room status, alerts, history, and HACCP reports. |
+
+![Cooling Patrol sensor](https://cdn.voltic.es/media/cooling-patrol/product/front_nb.png)
+
+## Workflow
+
+1. The sensor takes a reading and sends it to the Cooling Patrol Hub.
+2. The Hub sends the reading to [app.voltic.es](https://app.voltic.es).
+3. The app compares the reading with the configured range and shows states such as **In range**, **Close to limit**, **Out of range**, **No data**, **Alert off**, or **Not configured**.
+4. Deviations are reviewed in **Cooling Patrol > Overview** and documented in **HACCP > Register** when required by the site's procedure.
+
+<Warning>
+  An old reading or **No data** status does not confirm that the room is at a safe temperature. If connectivity is lost, take a manual measurement and follow the site's food-safety plan.
+</Warning>
 
 <CardGroup cols={2}>
   <Card title="Installation guide" icon="screwdriver-wrench" href="/en/cooling-patrol/installation">
     Install the Hub and sensors step by step, from site evaluation to verification in the app.
+  </Card>
+
+  <Card title="Operation, alerts, and history" icon="chart-line" href="/en/cooling-patrol/operation">
+    Configure ranges, respond to alerts, review trends, and download the information you need.
+  </Card>
+
+  <Card title="Screenshot inventory" icon="camera" href="/en/cooling-patrol/screenshot-inventory">
+    See which screens need captures and which technical details still require confirmation.
   </Card>
 
   <Card title="Contact support" icon="headset" href="/en/support/contact">

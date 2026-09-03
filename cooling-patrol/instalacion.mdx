@@ -20,6 +20,8 @@ Antes de empezar, confirma que tienes todos los componentes:
 - Cinta de doble cara
 - Taladro y tornillos
 - Destornillador
+- Termómetro de referencia con calibración vigente (para la verificación)
+- Etiquetas o registro de ubicación y número de serie
 
 ## Instalación
 
@@ -32,7 +34,7 @@ Antes de empezar, confirma que tienes todos los componentes:
     - Con espacio suficiente alrededor del Hub
     - Con acceso a **alimentación USB-C** y, si es posible, a **Ethernet (RJ-45)**
 
-    Identifica las cámaras frigoríficas u otros espacios donde irán instalados los sensores.
+    Identifica las cámaras frigoríficas u otros espacios donde irán instalados los sensores. Para cada cámara define antes de fijar el sensor un punto representativo, alejado del chorro directo del evaporador, de la puerta y de superficies que puedan transmitir una temperatura distinta a la del producto.
   </Step>
   <Step title="Conexión del Hub">
     Conecta el Hub siguiendo este orden:
@@ -63,8 +65,16 @@ Antes de empezar, confirma que tienes todos los componentes:
        - Instálalo en la ubicación correspondiente (dentro de la cámara frigorífica)
     5. Repite este proceso por cada sensor.
   </Step>
+  <Step title="Colocar y documentar cada sensor">
+    Fija el sensor con el método indicado en el manual del modelo. No lo cubras ni lo apoyes contra una pared, techo, suelo, bandeja o producto. Evita golpes, agua, hielo, condensación y el flujo directo del evaporador.
+
+    Registra el nombre del sensor, la cámara, el número de serie, la fecha de instalación y una referencia clara de su posición. Si cambias el sensor de cámara, actualiza primero la ubicación en la plataforma.
+  </Step>
+  <Step title="Verificar la lectura inicial">
+    Cuando la lectura se haya estabilizado, compárala con un termómetro de referencia junto al punto de medición. Anota la diferencia, la hora y el instrumento utilizado. No introduzcas un offset en la app salvo que el equipo técnico confirme que el modelo lo admite.
+  </Step>
   <Step title="Verificación del sistema">
-    Cuando hayas instalado todos los dispositivos, revisa en la app que están reportando la información correcta. Debes ver cómo la temperatura del sensor baja hasta coincidir con la temperatura interior del espacio donde está instalado.
+    Cuando hayas instalado todos los dispositivos, revisa en la app que están reportando la información correcta. Debes ver cómo la temperatura del sensor baja hasta aproximarse a la temperatura interior del espacio donde está instalado y que el estado deja de aparecer como **Sin datos** o **No configurado**.
 
     <Tip>
       Puede tardar unos minutos en empezar a reportar la información. Sé paciente.
@@ -73,6 +83,17 @@ Antes de empezar, confirma que tienes todos los componentes:
     Si tras añadir el sensor a la plataforma, configurarlo e instalarlo dentro de la cámara frigorífica no reporta información pasada **30-60 minutos**, contacta con soporte.
   </Step>
 </Steps>
+
+<Warning>
+  El tipo de batería, el grado de protección, la tolerancia de calibración, el intervalo de estabilización y las distancias exactas de colocación dependen del modelo instalado. Confírmalos en el manual técnico antes de convertirlos en requisitos del emplazamiento.
+</Warning>
+
+## Después de la instalación
+
+- Configura los rangos en [Operación, alertas e historial](/cooling-patrol/operacion).
+- Completa las comprobaciones de batería y mantenimiento según el manual del sensor.
+- Guarda la evidencia de alta, ubicación, lectura inicial y persona responsable.
+- Consulta el [inventario de pantallas y capturas](/cooling-patrol/inventario-capturas) si necesitas ilustrar el procedimiento.
 
 ## Soporte Cooling Patrol
 

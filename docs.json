@@ -73,7 +73,9 @@
             "icon": "snowflake",
             "pages": [
               "cooling-patrol/index",
-              "cooling-patrol/instalacion"
+              "cooling-patrol/inventario-capturas",
+              "cooling-patrol/instalacion",
+              "cooling-patrol/operacion"
             ]
           },
           {
@@ -144,7 +146,9 @@
             "icon": "snowflake",
             "pages": [
               "en/cooling-patrol/index",
-              "en/cooling-patrol/installation"
+              "en/cooling-patrol/screenshot-inventory",
+              "en/cooling-patrol/installation",
+              "en/cooling-patrol/operation"
             ]
           },
           {
