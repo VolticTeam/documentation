@@ -1,0 +1,53 @@
+---
+title: "Frequently Asked Questions About the Voltic System"
+sidebarTitle: "FAQ"
+description: "Answers to the most frequently asked questions about the installation, configuration, and operation of the Voltic Smart Room Control system."
+---
+
+Find here the answers to the most common questions about the Voltic Smart Room Control system. If you cannot find what you are looking for, [contact our technical support](/en/support/contact).
+
+<AccordionGroup>
+  <Accordion title="What does a Voltic kit for a room include?">
+    Each kit consists of a VolticHub (Zigbee coordinator), a Voltic FrostLine (thermostat), a Voltic Switch (contactor), PIR presence sensors for bedroom and bathroom, and contact sensors for window and door. Each kit is preconfigured for a specific room and cannot be interchanged.
+  </Accordion>
+
+  <Accordion title="Can I swap kits between rooms?">
+    No. Each kit is preconfigured for a specific room. Before installing any device, always verify the label with the room number on the box. Installing a kit in the wrong room will cause configuration issues on the platform.
+  </Accordion>
+
+  <Accordion title="Does the VolticHub need Ethernet?">
+    Ethernet is preferable as it provides greater stability. If Ethernet is not available in the installation area, the Hub can also connect via Wi-Fi. See the [VolticHub installation guide](/en/installation/voltichub-repeaters) for Wi-Fi connection steps.
+  </Accordion>
+
+  <Accordion title="Why should I keep Wi-Fi channel 11 free?">
+    The Voltic Zigbee system operates in the 2.4 GHz band, on the same frequency as Wi-Fi channel 11. If the hotel's APs use that channel, interference can occur that affects Zigbee network stability and causes connectivity loss in devices.
+  </Accordion>
+
+  <Accordion title="Which fan coil models is the Voltic FrostLine compatible with?">
+    The Voltic FrostLine is compatible with 2-pipe / 2-way fan coils. It is also compatible with 3-way valves. The thermostat power supply is exclusively 230V AC: do not connect 12V or 24V valves. See the [FrostLine installation guide](/en/installation/voltic-frostline) for the connection diagram.
+  </Accordion>
+
+  <Accordion title="What does ECO mode do?">
+    ECO mode automatically turns off the HVAC when no presence is detected in the room for the configured time (default, 5 minutes). It is the recommended mode for standard hotel operation. See the page about [ECO and COMFORT modes](/en/operation/operating-modes) for more details.
+  </Accordion>
+
+  <Accordion title="What does COMFORT mode do?">
+    COMFORT mode keeps the room at a predefined comfort temperature (24°C by default) even if no one is present, as long as the window is closed. It is recommended for rooms with high sun exposure or when you want to avoid the "heat blast" effect when the guest returns.
+  </Accordion>
+
+  <Accordion title="Why is the sensor not reporting temperature?">
+    It may take a few minutes to start reporting after installation. If after 30-60 minutes no information appears on the platform, verify the status and polarity of the batteries, the distance to the hub, and that the device is properly joined to the Zigbee network.
+  </Accordion>
+
+  <Accordion title="How much can I save with Voltic?">
+    Hotels that operate the Voltic system correctly can achieve energy savings of up to 30% in rooms. Actual results may vary depending on building type, room orientation, weather conditions, and guest usage habits.
+  </Accordion>
+
+  <Accordion title="How do I mount contact sensors durably?">
+    Apply a thin layer of Sikaflex-118 Extreme Grab over the included 3M adhesive. Press the sensor firmly against the surface for at least 10 seconds. You can also secure them with screws if the surface allows. See the [contact sensor guide](/en/installation/contact-sensors) for more details.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Cannot find the answer?" icon="headset" href="/en/support/contact">
+  Contact our technical support team by email, phone, or by booking an appointment.
+</Card>

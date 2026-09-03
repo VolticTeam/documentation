@@ -8,26 +8,10 @@
   },
   "logo": {
     "light": "https://cdn.voltic.es/media/logos/logo_cian.svg",
-    "dark": "https://cdn.voltic.es/media/logos/logo_cian.svg"
+    "dark": "https://cdn.voltic.es/media/logos/logo_cian.svg",
+    "href": "https://voltic.one"
   },
   "favicon": "https://cdn.voltic.es/media/logos/logo_cian.svg",
-  "navbar": {
-    "links": [
-      {
-        "href": "https://app.voltic.es",
-        "label": "Ir a la app"
-      },
-      {
-        "href": "https://voltic.es",
-        "label": "Ir a la web"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Contactar soporte",
-      "href": "mailto:soporte@voltic.es"
-    }
-  },
   "footer": {
     "socials": {
       "x": "https://twitter.com/voltic_es",
@@ -39,60 +23,126 @@
     "eyebrows": "breadcrumbs"
   },
   "navigation": {
-    "groups": [
+    "languages": [
       {
-        "group": "Inicio",
-        "icon": "house",
-        "pages": [
-          "index"
+        "language": "es",
+        "default": true,
+        "groups": [
+          {
+            "group": "Inicio",
+            "icon": "house",
+            "pages": [
+              "index"
+            ]
+          },
+          {
+            "group": "Primeros pasos",
+            "icon": "rocket",
+            "pages": [
+              "primeros-pasos/index",
+              "primeros-pasos/como-funciona"
+            ]
+          },
+          {
+            "group": "Guías de instalación",
+            "icon": "screwdriver-wrench",
+            "pages": [
+              "instalacion/index",
+              "instalacion/requisitos",
+              "instalacion/voltichub-repetidores",
+              "instalacion/voltic-switch",
+              "instalacion/voltic-frostline",
+              "instalacion/sensores-contacto",
+              "instalacion/sensores-presencia",
+              "instalacion/manuales-tecnicos"
+            ]
+          },
+          {
+            "group": "Cooling Patrol",
+            "icon": "snowflake",
+            "pages": [
+              "cooling-patrol/index",
+              "cooling-patrol/instalacion"
+            ]
+          },
+          {
+            "group": "Operación y buenas prácticas",
+            "icon": "chart-line",
+            "pages": [
+              "operacion/index",
+              "operacion/modos-funcionamiento",
+              "operacion/temperaturas-recomendadas",
+              "operacion/sensores"
+            ]
+          },
+          {
+            "group": "Soporte",
+            "icon": "headset",
+            "pages": [
+              "soporte/faq",
+              "soporte/contacto"
+            ]
+          }
         ]
       },
       {
-        "group": "Primeros pasos",
-        "icon": "rocket",
-        "pages": [
-          "primeros-pasos/index",
-          "primeros-pasos/como-funciona"
-        ]
-      },
-      {
-        "group": "Guías de instalación",
-        "icon": "screwdriver-wrench",
-        "pages": [
-          "instalacion/index",
-          "instalacion/requisitos",
-          "instalacion/voltichub-repetidores",
-          "instalacion/voltic-switch",
-          "instalacion/voltic-frostline",
-          "instalacion/sensores-contacto",
-          "instalacion/sensores-presencia",
-          "instalacion/manuales-tecnicos"
-        ]
-      },
-      {
-        "group": "Cooling Patrol",
-        "icon": "snowflake",
-        "pages": [
-          "cooling-patrol/index",
-          "cooling-patrol/instalacion"
-        ]
-      },
-      {
-        "group": "Operación y buenas prácticas",
-        "icon": "chart-line",
-        "pages": [
-          "operacion/index",
-          "operacion/modos-funcionamiento",
-          "operacion/temperaturas-recomendadas",
-          "operacion/sensores"
-        ]
-      },
-      {
-        "group": "Soporte",
-        "icon": "headset",
-        "pages": [
-          "soporte/faq",
-          "soporte/contacto"
+        "language": "en",
+        "groups": [
+          {
+            "group": "Home",
+            "icon": "house",
+            "pages": [
+              "en/index"
+            ]
+          },
+          {
+            "group": "Getting Started",
+            "icon": "rocket",
+            "pages": [
+              "en/getting-started/index",
+              "en/getting-started/how-it-works"
+            ]
+          },
+          {
+            "group": "Installation Guides",
+            "icon": "screwdriver-wrench",
+            "pages": [
+              "en/installation/index",
+              "en/installation/requirements",
+              "en/installation/voltichub-repeaters",
+              "en/installation/voltic-switch",
+              "en/installation/voltic-frostline",
+              "en/installation/contact-sensors",
+              "en/installation/presence-sensors",
+              "en/installation/technical-manuals"
+            ]
+          },
+          {
+            "group": "Cooling Patrol",
+            "icon": "snowflake",
+            "pages": [
+              "en/cooling-patrol/index",
+              "en/cooling-patrol/installation"
+            ]
+          },
+          {
+            "group": "Operation & Best Practices",
+            "icon": "chart-line",
+            "pages": [
+              "en/operation/index",
+              "en/operation/operating-modes",
+              "en/operation/recommended-temperatures",
+              "en/operation/sensors"
+            ]
+          },
+          {
+            "group": "Support",
+            "icon": "headset",
+            "pages": [
+              "en/support/faq",
+              "en/support/contact"
+            ]
+          }
         ]
       }
     ]
@@ -104,9 +154,6 @@
   },
   "seo": {
     "indexing": "all"
-  },
-  "search": {
-    "prompt": "Buscar..."
   },
   "markdown": {
     "schema": true

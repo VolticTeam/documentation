@@ -1,0 +1,57 @@
+---
+title: "Install the VolticHub and Zigbee Repeaters"
+sidebarTitle: "VolticHub"
+description: "Connect and mount the VolticHub and Zigbee repeaters correctly to ensure coverage in all hotel rooms."
+---
+
+The VolticHub is the coordinator of the Zigbee network. Its correct installation is essential to ensure connectivity for all devices within the rooms. Always install it before mounting the devices in each room.
+
+<Warning>
+  This step is the first and most critical of the entire installation. Without the Hub properly connected, no sensor or actuator on the floor will work.
+</Warning>
+
+## Recommended location
+
+- **Technical space or hallway ceiling** on the corresponding floor
+- With **accessibility and clear visibility** (avoid metal cabinets or shielded areas)
+- The antenna must be at **90 degrees (perpendicular to the hub)**
+
+<CardGroup cols={2}>
+  <Card>
+    ![VolticHub - side view](https://r2.voltic.es/media/installation-docs-assets/voltichub/voltichub_side_view.webp)
+  </Card>
+
+  <Card>
+    ![VolticHub - rear view](https://r2.voltic.es/media/installation-docs-assets/voltichub/voltichub_rear_view.webp)
+  </Card>
+</CardGroup>
+
+## VolticHub connection
+
+<Steps>
+  <Step title="Connect the RJ45 cable first">
+    Connect the Ethernet cable (RJ45) to the Hub port before plugging in the power. This ensures the Hub boots with available network connectivity.
+  </Step>
+  <Step title="Connect the 230V power supply">
+    Once the Ethernet is connected, connect the 230V power supply to the Hub. Wait a few minutes for the system to start correctly.
+  </Step>
+</Steps>
+
+<Note>
+  Always connect the RJ45 before the power supply. If you reverse the order, the Hub may boot in Wi-Fi mode even if Ethernet is available.
+</Note>
+
+## Connection diagram
+
+![VolticHub - Connection diagram](https://r2.voltic.es/media/installation-docs-assets/voltichub/voltichub_scheme.webp)
+
+You can watch a reference video of the RJ45 cable connection at: [https://r2.voltic.es/media/installation-docs-assets/voltichub/voltichub-conectar-rj45.mp4](https://r2.voltic.es/media/installation-docs-assets/voltichub/voltichub-conectar-rj45.mp4)
+
+## Zigbee repeaters
+
+Zigbee repeaters extend network coverage to rooms far from the Hub. Apply the same location rules: clear area, accessible, and without metal cabinets. They require 24/7 power.
+
+## Next step
+
+- [Prerequisites: kit verification](/en/installation/requirements)
+- [Install the Voltic Switch](/en/installation/voltic-switch)

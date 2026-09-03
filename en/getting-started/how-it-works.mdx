@@ -1,0 +1,56 @@
+---
+title: "How Voltic Smart Room Control Works"
+sidebarTitle: "How It Works"
+description: "Learn how Voltic automates HVAC and lighting in hotel rooms to reduce energy consumption by up to 30%."
+---
+
+Voltic Smart Room Control is a BMS (Building Management System) designed specifically for hotel rooms. It combines wireless Zigbee sensors, a connectivity hub, and a cloud platform to automate climate control and lighting based on the actual occupancy of each room.
+
+## System components
+
+| Device | Function |
+| --- | --- |
+| **VolticHub** | Zigbee coordinator. Connects via Ethernet or Wi-Fi and centralizes all sensors on the floor. |
+| **Voltic FrostLine** | Smart digital thermostat. Controls the room fan coil (2-pipe / 2-way). |
+| **Voltic Switch** | Smart contactor in the electrical panel. Controls lighting and TV subcircuits. |
+| **Presence sensor (PIR)** | Detects whether people are in the room or bathroom. |
+| **Contact sensor** | Detects whether a window or door is open or closed. |
+
+## How automation works
+
+<Steps>
+  <Step title="The Hub detects sensor events">
+    The VolticHub receives real-time status from Zigbee sensors: presence in the room, window openings, and ambient temperature.
+  </Step>
+  <Step title="The system evaluates occupancy and window status">
+    If no presence is detected for the configured time (default: 5 minutes), the system activates ECO mode. If an open window is detected, climate control is automatically turned off.
+  </Step>
+  <Step title="Automations adjust HVAC and lighting">
+    The Voltic FrostLine regulates the fan coil according to the setpoint of the active mode (ECO or COMFORT). The Voltic Switch cuts or restores power to lighting and TV subcircuits.
+  </Step>
+  <Step title="Data is reported to the platform">
+    All activity is logged in [app.voltic.es](https://app.voltic.es), where you can monitor room status, configure automations, and review energy consumption.
+  </Step>
+</Steps>
+
+## Zigbee network
+
+All sensors and actuators communicate with the VolticHub using the Zigbee protocol (2.4 GHz band). The hub acts as the network coordinator. To avoid interference, it is important to keep the hotel Wi-Fi channel 11 free.
+
+<Note>
+  Each VolticHub covers one floor of the hotel. If there are multiple floors, install one hub per floor with its corresponding Ethernet connection.
+</Note>
+
+## Energy savings
+
+Hotels that operate the Voltic system correctly can achieve **energy savings of up to 30% in guest rooms**, thanks to presence-based automation and proper temperature configuration.
+
+<CardGroup cols={2}>
+  <Card title="Installation guide" icon="screwdriver-wrench" href="/en/installation">
+    Start installing the devices in the hotel.
+  </Card>
+
+  <Card title="ECO and COMFORT modes" icon="leaf" href="/en/operation/operating-modes">
+    Configure operating modes to maximize savings.
+  </Card>
+</CardGroup>

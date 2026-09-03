@@ -1,0 +1,69 @@
+---
+title: "Install the Voltic Switch (Zigbee Contactor)"
+sidebarTitle: "Voltic Switch"
+description: "Install the Voltic Switch smart contactor in the room's electrical panel to control lighting and TV by presence."
+---
+
+The Voltic Switch is a smart Zigbee contactor with electrical consumption measurement. It replaces the traditional key card and directly powers the TV and lighting subcircuits. It activates and deactivates automatically based on presence detected by the PIR sensors.
+
+## Technical specifications
+
+| Parameter | Value |
+| --- | --- |
+| Nominal voltage | 230 VAC 50 Hz |
+| Maximum current | 40 A |
+| Operating temperature | 5 degrees C - 35 degrees C |
+| Protection | IP20 |
+| Poles | 1P + N |
+| Size | 18 mm (1 DIN module) |
+| Mounting | DIN rail 35 mm |
+| Socket standard | DIN GB10931 / IEC60898 |
+
+## Where to install it
+
+Install the Voltic Switch in the **room's electrical panel** or in an accessible technical area, right after the circuit breaker on the general line, on the output line to TV + lighting.
+
+## Connection and wiring
+
+- **230V input:** from the 24h circuit breaker
+- **230V output:** to the lighting and TV subcircuits
+- **Control:** Zigbee signal from the VolticHub
+
+The Voltic Switch includes real-time measurement of:
+
+- Active and reactive power
+- Power factor
+- Historical consumption
+
+![Voltic Switch - Connection diagram](https://r2.voltic.es/media/installation-docs-assets/devices/switch/switch_scheme.webp)
+
+## Mounting
+
+Mount the Voltic Switch on the **standard DIN rail** of the electrical panel. Ensure adequate pressure and firm fixation.
+
+## Installation example
+
+![Voltic Switch - Installation in electrical panel](https://r2.voltic.es/media/installation-docs-assets/devices/switch/switch_cuadro.webp)
+
+## Post-installation checks
+
+<Steps>
+  <Step title="Verify the 230V input">
+    Check with a multimeter that 230V reaches the input terminals of the contactor.
+  </Step>
+  <Step title="Verify the output according to activation signal">
+    Check that the output responds correctly when the system sends the activation signal.
+  </Step>
+  <Step title="Simulate presence">
+    Manually activate the presence sensor and confirm that the Voltic Switch enables the lighting line.
+  </Step>
+  <Step title="Verify synchronization on the platform">
+    Go to [app.voltic.es](https://app.voltic.es) and confirm that the device appears synced and reports the correct status.
+  </Step>
+</Steps>
+
+## Related articles
+
+- [Install the Voltic FrostLine](/en/installation/voltic-frostline)
+- [PIR presence sensors](/en/installation/presence-sensors)
+- [Technical manuals](/en/installation/technical-manuals)
