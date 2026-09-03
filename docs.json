@@ -27,6 +27,23 @@
       {
         "language": "es",
         "default": true,
+        "navbar": {
+          "links": [
+            {
+              "href": "https://app.voltic.es",
+              "label": "Ir a la app"
+            },
+            {
+              "href": "https://voltic.es",
+              "label": "Ir a la web"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Contactar soporte",
+            "href": "mailto:soporte@voltic.es"
+          }
+        },
         "pages": [
           "index",
           {
@@ -81,6 +98,23 @@
       },
       {
         "language": "en",
+        "navbar": {
+          "links": [
+            {
+              "href": "https://app.voltic.es",
+              "label": "Go to app"
+            },
+            {
+              "href": "https://voltic.es",
+              "label": "Go to website"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Contact support",
+            "href": "mailto:soporte@voltic.es"
+          }
+        },
         "pages": [
           "en/index",
           {
