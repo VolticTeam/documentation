@@ -1,0 +1,90 @@
+---
+title: "Instalar FrostLine en un hotel"
+sidebarTitle: "FrostLine en hoteles"
+description: "Instala y pone en marcha Voltic FrostLine como parte de Hotel Room Control, habitación por habitación y planta por planta."
+---
+
+En **Hotel Room Control**, cada habitación tiene un **Voltic FrostLine** asociado a su kit. El termostato controla el fan coil y ejecuta las consignas que el sistema calcula con los sensores de presencia y de ventana.
+
+Esta página adapta la instalación de FrostLine al despliegue de un hotel. Para una vivienda o una instalación con un Hub Tuya, consulta la [guía de instalación general](/instalacion/voltic-frostline) y la [matriz de compatibilidad](/frostline/compatibilidad).
+
+<Warning>
+  FrostLine trabaja con 230 V. La instalación debe realizarla exclusivamente personal electricista cualificado, con el circuito aislado, bloqueado y verificado, respetando la normativa local. No energices el equipo durante el montaje.
+</Warning>
+
+## Papel de FrostLine en Room Control
+
+| Elemento | Responsabilidad en el hotel |
+| --- | --- |
+| **FrostLine** | Regula el fan coil de su habitación: válvula o válvulas según el proyecto y velocidades V1/V2/V3. |
+| **VolticHub** | Coordina los dispositivos Zigbee de la planta y comunica los estados con la plataforma. |
+| **Sensor de presencia** | Indica si la habitación está ocupada para aplicar ECO o CONFORT. |
+| **Sensor de contacto** | Indica si una ventana está abierta para desactivar la climatización según el temporizador configurado. |
+
+El FrostLine debe quedar identificado con la habitación correcta. No intercambies kits entre habitaciones: la asociación se valida en la plataforma durante la puesta en marcha.
+
+## Topología y preparación de la planta
+
+La topología oficial es un **VolticHub por planta**. Como referencia, cada Hub puede gestionar aproximadamente 150 dispositivos y se recomiendan 10–15 habitaciones de esa misma planta. Añade repetidores y solo incorpora otro Hub si el estudio de cobertura lo requiere.
+
+El Hub utiliza por defecto el **canal Zigbee 25**. Configura los puntos de acceso del hotel para evitar el **canal 11 de Wi‑Fi** y reducir colisiones e interferencias.
+
+Antes de empezar una planta, prepara:
+
+- El listado de habitaciones y la numeración de cada kit.
+- El plano de ubicación del Hub, los repetidores y las habitaciones.
+- El esquema aprobado del fan coil de cada tipo de habitación.
+- Una línea eléctrica permanente para cada FrostLine, no controlada por contactor ni tarjetero.
+- Acceso a [app.voltic.es](https://app.voltic.es) para validar los dispositivos.
+
+## Escenarios de climatización
+
+| Escenario del hotel | Uso de FrostLine | Validación necesaria |
+| --- | --- | --- |
+| Fan coil de **2 tubos** | Escenario habitual: una válvula y tres velocidades de ventilador. | Esquema de 2 tubos aprobado para la versión instalada. |
+| Fan coil de **4 tubos** | Control de circuitos independientes de frío y calor cuando el proyecto lo contempla. | Mapa de salidas, válvulas y lógica de cambio de modo definidos por proyecto. |
+| Fan coil + **suelo radiante hidráulico** | Coordinación del fan coil con el actuador del suelo y sus prioridades. | Actuador, sondas, protecciones y secuencia de funcionamiento validados. |
+
+<Warning>
+  El esquema de 2 tubos no es una plantilla para 4 tubos ni para instalaciones combinadas con suelo radiante. El mapa de bornes depende de la versión, el firmware y el esquema validado del proyecto. Si falta alguno de estos datos, solicita el esquema a soporte antes de cablear.
+</Warning>
+
+## Orden de instalación por habitación
+
+<Steps>
+  <Step title="Comprueba la identidad del kit">
+    Verifica que la etiqueta del FrostLine coincide con la habitación prevista y con el registro de la plataforma.
+  </Step>
+  <Step title="Monta el termostato">
+    Instálalo a 1,5 m del suelo, en una pared interior, lejos de ventanas, puertas, radiadores y corrientes de aire. Usa una línea eléctrica permanente de 230 V.
+  </Step>
+  <Step title="Conecta el fan coil">
+    Con el circuito aislado, conecta la alimentación y las salidas según el esquema aprobado para esa habitación. No conectes válvulas de 12 V o 24 V ni una carga eléctrica de suelo radiante directamente.
+  </Step>
+  <Step title="Vincula con el Hub de la planta">
+    Incluye el FrostLine en el VolticHub correspondiente y comprueba que aparece en la habitación correcta de [app.voltic.es](https://app.voltic.es).
+  </Step>
+  <Step title="Prueba la habitación">
+    Comprueba la temperatura, la válvula o válvulas, V1/V2/V3 y la reacción a una ventana abierta y a la ausencia de presencia.
+  </Step>
+</Steps>
+
+## Puesta en marcha de la planta
+
+Valida cada habitación antes de pasar a la siguiente:
+
+1. FrostLine aparece conectado y con la habitación correcta.
+2. La temperatura reportada es razonable y se actualiza.
+3. La consigna ECO y la consigna CONFORT producen el comportamiento esperado.
+4. La ventana abierta desactiva el fan coil después del temporizador configurado.
+5. La ausencia activa el comportamiento de ECO cuando ese modo está seleccionado.
+6. La válvula y las velocidades de ventilador responden al mando desde la plataforma.
+
+Consulta [los modos ECO y CONFORT](/operacion/modos-funcionamiento) para revisar los temporizadores y las consignas del hotel. Para incidencias de cableado o compatibilidad, utiliza la [matriz de FrostLine](/frostline/compatibilidad) y [contacta con soporte](/soporte/contacto).
+
+## Artículos relacionados
+
+- [Cómo funciona Hotel Room Control](/primeros-pasos/como-funciona)
+- [Instalación general de FrostLine](/instalacion/voltic-frostline)
+- [Funcionamiento de FrostLine en hoteles](/operacion/voltic-frostline-hotel)
+- [Funcionamiento de los sensores](/operacion/sensores)

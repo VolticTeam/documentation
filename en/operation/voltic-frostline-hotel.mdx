@@ -1,0 +1,77 @@
+---
+title: "Operate FrostLine in a Hotel"
+sidebarTitle: "FrostLine Operation"
+description: "Manage the Voltic FrostLine in each room within Hotel Room Control and verify its automations."
+---
+
+In a hotel, Voltic FrostLine does not operate in isolation: it receives the Room Control setpoint and works with the VolticHub, presence sensors, and window sensors.
+
+## What FrostLine controls
+
+- The room temperature setpoint.
+- The HVAC mode configured for the project.
+- The fan coil valve or valves according to the approved diagram.
+- Fan speeds V1, V2, and V3.
+
+In a 4-pipe or fan coil plus hydronic underfloor-heating installation, the cooling, heating, and priority sequence is defined by the project. Do not change that configuration from a room without validating the diagram with maintenance or support.
+
+## Behavior by room state
+
+| Mode | Window | Presence | FrostLine behavior |
+| --- | --- | --- | --- |
+| ECO | Closed | Detected | Regulates the fan coil according to the ECO setpoint. |
+| ECO | Closed | Not detected for the timer | Turns HVAC off when the presence timer ends (5 minutes by default). |
+| COMFORT | Closed | Detected or not detected | Maintains the configured comfort setpoint. |
+| ECO or COMFORT | Open for the configured timer | Any | Turns HVAC off when the window timer ends. |
+
+The table describes Room Control behavior; see [ECO and COMFORT modes](/en/operation/operating-modes) to change timers and setpoints centrally.
+
+## Hotel operating flow
+
+<Steps>
+  <Step title="Configure global behavior">
+    Define ECO and COMFORT setpoints and presence and window timers from the Control Panel.
+  </Step>
+  <Step title="Monitor rooms">
+    In [app.voltic.es](https://app.voltic.es), verify that FrostLine is connected, reports temperature, and belongs to the correct room.
+  </Step>
+  <Step title="Respond to an incident">
+    Identify whether the problem affects the Zigbee network, a sensor, the platform, or a fan coil output before touching wiring.
+  </Step>
+  <Step title="Validate the repair">
+    Test a setpoint, the valve, all three fan speeds, and the window and presence responses before returning the room to operation.
+  </Step>
+</Steps>
+
+## Quick checks
+
+| Symptom | Initial check |
+| --- | --- |
+| FrostLine is offline | Check the floor VolticHub, repeaters, and assigned room. |
+| Temperature is not updating | Check FrostLine connectivity and wait for the platform state to refresh. |
+| Fan coil does not respond | Check the active mode, setpoint, and relevant output without opening an energized device. |
+| It turns off while a guest is present | Check the presence sensor, timer, and that the window is not reporting open. |
+| It remains on when the room is empty | Check whether COMFORT is selected; in ECO it should turn off after the absence timer. |
+
+<Warning>
+  Do not open or rewire an energized FrostLine. Electrical checks must be performed by a qualified electrician with the circuit isolated and verified.
+</Warning>
+
+## Maintenance and room changes
+
+Before replacing a FrostLine or moving a kit:
+
+1. Record the room, device reference, and firmware.
+2. Unpair and include the device again following the VolticHub procedure.
+3. Verify that the room association and automations are preserved.
+4. Run the complete room validation before making the room available again.
+
+Do not swap kits between rooms: each kit is preconfigured for a specific room.
+
+## Related articles
+
+- [ECO and COMFORT modes](/en/operation/operating-modes)
+- [How sensors work](/en/operation/sensors)
+- [Recommended temperatures](/en/operation/recommended-temperatures)
+- [Install FrostLine in a hotel](/en/installation/voltic-frostline-hotel)
+- [Contact support](/en/support/contact)

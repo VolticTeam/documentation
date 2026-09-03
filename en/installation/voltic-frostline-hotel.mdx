@@ -1,0 +1,90 @@
+---
+title: "Install FrostLine in a Hotel"
+sidebarTitle: "FrostLine in Hotels"
+description: "Install and commission Voltic FrostLine as part of Hotel Room Control, room by room and floor by floor."
+---
+
+In **Hotel Room Control**, every room has a **Voltic FrostLine** assigned to its kit. The thermostat controls the fan coil and executes the setpoints calculated by the system from presence and window sensors.
+
+This page adapts FrostLine installation to a hotel deployment. For a home or a Tuya Hub installation, see the [general installation guide](/en/installation/voltic-frostline) and the [compatibility matrix](/en/frostline/compatibility).
+
+<Warning>
+  FrostLine operates at 230 V. Installation must be performed exclusively by a qualified electrician, with the circuit isolated, locked out, and verified, following local regulations. Do not energize the device during installation.
+</Warning>
+
+## FrostLine's role in Room Control
+
+| Component | Responsibility in the hotel |
+| --- | --- |
+| **FrostLine** | Regulates the fan coil in its room: valve or valves according to the project, plus V1/V2/V3 fan speeds. |
+| **VolticHub** | Coordinates the floor's Zigbee devices and communicates their status with the platform. |
+| **Presence sensor** | Indicates whether the room is occupied so ECO or COMFORT can be applied. |
+| **Contact sensor** | Indicates whether a window is open so HVAC can be disabled according to the configured timer. |
+
+FrostLine must remain identified with the correct room. Do not swap kits between rooms: the association is validated on the platform during commissioning.
+
+## Floor topology and preparation
+
+The official topology is **one VolticHub per floor**. As a reference, each Hub can manage approximately 150 devices and should be assigned 10–15 rooms on that same floor. Add repeaters and only add another Hub if the coverage survey requires it.
+
+The Hub uses **Zigbee channel 25** by default. Configure the hotel's access points to avoid **Wi-Fi channel 11** and reduce collisions and interference.
+
+Before starting a floor, prepare:
+
+- The room list and the numbering of each kit.
+- The floor plan showing the Hub, repeaters, and rooms.
+- The approved fan coil diagram for each room type.
+- A permanent electrical line for each FrostLine, not controlled by a contactor or key card.
+- Access to [app.voltic.es](https://app.voltic.es) to validate devices.
+
+## HVAC scenarios
+
+| Hotel scenario | FrostLine use | Required validation |
+| --- | --- | --- |
+| **2-pipe** fan coil | Standard scenario: one valve and three fan speeds. | Approved 2-pipe diagram for the installed version. |
+| **4-pipe** fan coil | Independent cooling and heating circuits when included in the project. | Project-defined output map, valves, and mode-change logic. |
+| Fan coil + **hydronic underfloor heating** | Coordinates the fan coil with the floor actuator and its priorities. | Validated actuator, sensors, protections, and operating sequence. |
+
+<Warning>
+  The 2-pipe diagram is not a template for 4-pipe or combined underfloor-heating installations. The terminal map depends on the version, firmware, and validated project diagram. If any of this information is missing, request the diagram from support before wiring.
+</Warning>
+
+## Room-by-room installation order
+
+<Steps>
+  <Step title="Check the kit identity">
+    Verify that the FrostLine label matches the intended room and the platform record.
+  </Step>
+  <Step title="Mount the thermostat">
+    Install it 1.5 m above the floor, on an interior wall, away from windows, doors, radiators, and drafts. Use a permanent 230 V electrical line.
+  </Step>
+  <Step title="Connect the fan coil">
+    With the circuit isolated, connect the supply and outputs according to the approved diagram for that room. Do not connect 12 V or 24 V valves or an electric underfloor-heating load directly.
+  </Step>
+  <Step title="Pair with the floor Hub">
+    Include FrostLine in the relevant VolticHub and verify that it appears under the correct room in [app.voltic.es](https://app.voltic.es).
+  </Step>
+  <Step title="Test the room">
+    Check temperature, valve or valves, V1/V2/V3, and the response to an open window and absence of presence.
+  </Step>
+</Steps>
+
+## Floor commissioning
+
+Validate each room before moving to the next:
+
+1. FrostLine is connected and assigned to the correct room.
+2. The reported temperature is reasonable and updates.
+3. ECO and COMFORT setpoints produce the expected behavior.
+4. An open window disables the fan coil after the configured timer.
+5. Absence triggers ECO behavior when that mode is selected.
+6. The valve and fan speeds respond to commands from the platform.
+
+See [ECO and COMFORT modes](/en/operation/operating-modes) to review hotel timers and setpoints. For wiring or compatibility issues, use the [FrostLine matrix](/en/frostline/compatibility) and [contact support](/en/support/contact).
+
+## Related articles
+
+- [How Hotel Room Control works](/en/getting-started/how-it-works)
+- [General FrostLine installation](/en/installation/voltic-frostline)
+- [Operate FrostLine in a hotel](/en/operation/voltic-frostline-hotel)
+- [How sensors work](/en/operation/sensors)

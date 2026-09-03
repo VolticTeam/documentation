@@ -3,15 +3,16 @@
   "theme": "almond",
   "name": "Voltic",
   "colors": {
-    "primary": "#005A73",
+    "primary": "#09C3F9",
     "light": "#09C3F9",
-    "dark": "#4F91AD"
+    "dark": "#0A2540"
   },
   "logo": {
     "light": "https://cdn.voltic.es/media/logos/logo_cian.svg",
     "dark": "https://cdn.voltic.es/media/logos/logo_cian.svg",
     "href": "https://voltic.one"
   },
+  "favicon": "favicon.png",
   "footer": {
     "socials": {
       "x": "https://twitter.com/voltic_es",
@@ -69,6 +70,7 @@
                   "instalacion/requisitos",
                   "instalacion/voltichub-repetidores",
                   "instalacion/voltic-switch",
+                  "instalacion/voltic-frostline-hotel",
                   "instalacion/sensores-contacto",
                   "instalacion/sensores-presencia"
                 ]
@@ -78,6 +80,7 @@
                 "icon": "chart-line",
                 "pages": [
                   "operacion/index",
+                  "operacion/voltic-frostline-hotel",
                   "operacion/modos-funcionamiento",
                   "operacion/temperaturas-recomendadas",
                   "operacion/sensores"
@@ -210,6 +213,7 @@
                   "en/installation/requirements",
                   "en/installation/voltichub-repeaters",
                   "en/installation/voltic-switch",
+                  "en/installation/voltic-frostline-hotel",
                   "en/installation/contact-sensors",
                   "en/installation/presence-sensors"
                 ]
@@ -219,6 +223,7 @@
                 "icon": "chart-line",
                 "pages": [
                   "en/operation/index",
+                  "en/operation/voltic-frostline-hotel",
                   "en/operation/operating-modes",
                   "en/operation/recommended-temperatures",
                   "en/operation/sensors"
