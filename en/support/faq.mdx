@@ -1,14 +1,14 @@
 ---
 title: "Frequently Asked Questions About the Voltic System"
 sidebarTitle: "FAQ"
-description: "Answers to the most frequently asked questions about the installation, configuration, and operation of the Voltic Smart Room Control system."
+description: "Answers to the most frequently asked questions about installing, configuring, and operating Voltic Smart Room Control and Voltic FrostLine."
 ---
 
-Find here the answers to the most common questions about the Voltic Smart Room Control system. If you cannot find what you are looking for, [contact our technical support](/en/support/contact).
+Find here the answers to the most common questions about Voltic Smart Room Control and Voltic FrostLine. If you cannot find what you are looking for, [contact our technical support](/en/support/contact).
 
 <AccordionGroup>
   <Accordion title="What does a Voltic kit for a room include?">
-    Each kit consists of a VolticHub (Zigbee coordinator), a Voltic FrostLine (thermostat), a Voltic Switch (contactor), PIR presence sensors for bedroom and bathroom, and contact sensors for window and door. Each kit is preconfigured for a specific room and cannot be interchanged.
+    The room kit includes a Voltic FrostLine (thermostat), a Voltic Switch (contactor), PIR presence sensors for the bedroom and bathroom, and contact sensors for the window and door. The VolticHub is shared floor infrastructure, not one Hub per room: as a reference, each Hub can manage approximately 150 devices and should be assigned 10–15 rooms on that same floor. Each room kit is preconfigured for a specific room and cannot be interchanged.
   </Accordion>
 
   <Accordion title="Can I swap kits between rooms?">
@@ -20,11 +20,15 @@ Find here the answers to the most common questions about the Voltic Smart Room C
   </Accordion>
 
   <Accordion title="Why should I keep Wi-Fi channel 11 free?">
-    The Voltic Zigbee system operates in the 2.4 GHz band, on the same frequency as Wi-Fi channel 11. If the hotel's APs use that channel, interference can occur that affects Zigbee network stability and causes connectivity loss in devices.
+    The Hub uses Zigbee channel 25 by default, which can overlap with Wi-Fi channel 11. Configure the hotel's access points to avoid channel 11 and reduce collisions and interference that could affect Zigbee network stability.
   </Accordion>
 
   <Accordion title="Which fan coil models is the Voltic FrostLine compatible with?">
-    The Voltic FrostLine is compatible with 2-pipe / 2-way fan coils. It is also compatible with 3-way valves. The thermostat power supply is exclusively 230V AC: do not connect 12V or 24V valves. See the [FrostLine installation guide](/en/installation/voltic-frostline) for the connection diagram.
+    The Voltic FrostLine can be used with 2-pipe fan coils, 4-pipe fan coils, and fan coil plus hydronic underfloor-heating installations, as well as 3-way valves where the diagram supports them. The thermostat power supply is exclusively 230V AC: do not connect 12V or 24V valves. Exact wiring depends on the device version and project; check the [compatibility matrix](/en/frostline/compatibility) before wiring.
+  </Accordion>
+
+  <Accordion title="Can I use FrostLine outside a hotel?">
+    Yes. FrostLine is also sold as a standalone thermostat for homes and can pair with a VolticHub or a Tuya-compatible Zigbee Hub through Tuya Smart / Smart Life. See the [standalone operation guide](/en/frostline/operation) and the pairing procedure for the selected Hub.
   </Accordion>
 
   <Accordion title="What does ECO mode do?">
@@ -40,7 +44,7 @@ Find here the answers to the most common questions about the Voltic Smart Room C
   </Accordion>
 
   <Accordion title="How much can I save with Voltic?">
-    Hotels that operate the Voltic system correctly can achieve energy savings of up to 30% in rooms. Actual results may vary depending on building type, room orientation, weather conditions, and guest usage habits.
+    Hotels that operate the Voltic system correctly can achieve energy savings of up to 30% in rooms. This is an internal Voltic figure; see [voltic.es](https://voltic.es) for more information. Actual results may vary depending on building type, room orientation, weather conditions, and guest usage habits.
   </Accordion>
 
   <Accordion title="How do I mount contact sensors durably?">

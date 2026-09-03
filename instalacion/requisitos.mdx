@@ -6,6 +6,10 @@ description: "Verifica los requisitos eléctricos, de red, documentación y kits
 
 Antes de comenzar cualquier instalación, asegúrate de que se cumplen todos los requisitos de esta página. Una preparación adecuada evita errores durante el montaje y garantiza la conectividad de todos los dispositivos.
 
+<Warning>
+  Cualquier trabajo sobre circuitos de 230 V debe realizarlo exclusivamente personal electricista cualificado. Aísla, bloquea y verifica el circuito antes de tocarlo, respeta la normativa eléctrica local y comprueba que las protecciones del cuadro son adecuadas.
+</Warning>
+
 ## Documentación previa
 
 <Note>
@@ -30,10 +34,16 @@ Puntos de alimentación 230V definidos por dispositivo:
 - Toma de red **RJ45 (macho)** para cada Hub
 - **Switch PoE** o enchufe con corriente 24/7 para cada Hub
 
+### Topología recomendada
+
+- Instala un **VolticHub por planta**. Si una planta se divide en zonas radioeléctricas independientes, añade un Hub o repetidores según el estudio de cobertura.
+- Como referencia, cada Hub puede gestionar aproximadamente **150 dispositivos**. Para mantener una cobertura robusta, se recomienda asignarle **10–15 habitaciones**.
+- Las habitaciones asociadas a un Hub deben estar en la **misma planta**. Coloca repetidores Zigbee cuando la distancia, los tabiques o los materiales del edificio reduzcan la señal.
+
 ### Cobertura Wi-Fi y Zigbee
 
 <Warning>
-  **Deja libre el canal 11 de la red Wi-Fi del hotel.** El sistema Zigbee de Voltic opera en la banda de 2,4 GHz, en la misma frecuencia que el canal 11 de Wi-Fi. Asegúrate de que las APs del hotel no utilicen ese canal para minimizar interferencias y garantizar la estabilidad de la red Voltic.
+  El Hub utiliza por defecto el **canal Zigbee 25**, que puede solaparse con el **canal 11 de Wi-Fi**. Configura los puntos de acceso del hotel para evitar el canal 11 y reducir colisiones e interferencias que podrían afectar a la estabilidad de la red Voltic.
 </Warning>
 
 - Alimentación 24/7 para cada repetidor Zigbee
@@ -47,7 +57,11 @@ Puntos de alimentación 230V definidos por dispositivo:
 - Cada caja debe tener una etiqueta con el **número de habitación** correspondiente
 - No instales dispositivos en una habitación que no coincida con la numeración del kit
 
-![Voltic Freeline Kit](https://r2.voltic.es/media/installation-docs-assets/devices/freeline/verificacion-kit-freeline.webp)
+![Voltic Freeline Kit (Room Control)](https://r2.voltic.es/media/installation-docs-assets/devices/freeline/verificacion-kit-freeline.webp)
+
+<Note>
+  **Voltic Freeline** identifica el sistema de control de habitación y su kit; **Voltic FrostLine** es el termostato. Son productos distintos.
+</Note>
 
 ## Siguiente paso
 

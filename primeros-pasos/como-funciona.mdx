@@ -10,7 +10,7 @@ Voltic Smart Room Control es un sistema BMS (Building Management System) diseña
 
 | Dispositivo | Función |
 | --- | --- |
-| **VolticHub** | Coordinador Zigbee. Se conecta por Ethernet o Wi-Fi y centraliza todos los sensores de la planta. |
+| **VolticHub** | Coordinador Zigbee. Se conecta por Ethernet o Wi-Fi y centraliza los dispositivos de su planta. |
 | **Voltic FrostLine** | Termostato digital inteligente. Controla el fan coil de la habitación (2 tubos / 2 vías). |
 | **Voltic Switch** | Contactor inteligente en el cuadro eléctrico. Controla las sublíneas de iluminación y TV. |
 | **Sensor de presencia (PIR)** | Detecta si hay personas en la habitación o en el baño. |
@@ -23,7 +23,7 @@ Voltic Smart Room Control es un sistema BMS (Building Management System) diseña
     El VolticHub recibe en tiempo real el estado de los sensores Zigbee: presencia en la habitación, apertura de ventanas y temperatura ambiente.
   </Step>
   <Step title="El sistema evalúa la ocupación y el estado de las ventanas">
-    Si no hay presencia durante el tiempo configurado (por defecto, 5 minutos), el sistema activa el modo ECO. Si se detecta una ventana abierta, la climatización se desactiva automáticamente.
+    El sistema aplica el modo seleccionado. En ECO, si no hay presencia durante el tiempo configurado (por defecto, 5 minutos), apaga la climatización; en CONFORT, mantiene la consigna aunque no haya presencia. Si se detecta una ventana abierta, la climatización se desactiva según el tiempo configurado para ventanas.
   </Step>
   <Step title="Las automatizaciones ajustan la climatización e iluminación">
     El Voltic FrostLine regula el fan coil según la consigna del modo activo (ECO o CONFORT). El Voltic Switch corta o restaura la alimentación a las sublíneas de iluminación y TV.
@@ -35,15 +35,15 @@ Voltic Smart Room Control es un sistema BMS (Building Management System) diseña
 
 ## Red Zigbee
 
-Todos los sensores y actuadores se comunican con el VolticHub mediante el protocolo Zigbee (banda de 2,4 GHz). El hub actúa como coordinador de la red. Para evitar interferencias, es importante dejar libre el canal 11 de la red Wi-Fi del hotel.
+Todos los sensores y actuadores se comunican con el VolticHub mediante el protocolo Zigbee (banda de 2,4 GHz). El Hub utiliza por defecto el **canal Zigbee 25**, que puede solaparse con el **canal 11 de Wi-Fi**. Configura los puntos de acceso del hotel para evitar el canal 11 y reducir colisiones e interferencias.
 
 <Note>
-  Cada VolticHub cubre una planta del hotel. Si hay varias plantas, se instala un hub por planta con su correspondiente conexión Ethernet.
+  La topología oficial es un VolticHub por planta. Como referencia, cada Hub puede gestionar aproximadamente 150 dispositivos y se recomienda asignarle 10–15 habitaciones de esa planta. Las habitaciones deben estar en la misma planta; añade repetidores y, solo si el estudio de cobertura lo exige, un Hub adicional.
 </Note>
 
 ## Ahorro energético
 
-Los hoteles que operan correctamente el sistema Voltic pueden alcanzar **ahorros energéticos de hasta un 30% en habitaciones**, gracias a la automatización por presencia y a la configuración adecuada de temperaturas.
+Los hoteles que operan correctamente el sistema Voltic pueden alcanzar **ahorros energéticos de hasta un 30% en habitaciones**, gracias a la automatización por presencia y a la configuración adecuada de temperaturas. Es un dato interno de Voltic; consulta [voltic.es](https://voltic.es) para más información.
 
 <CardGroup cols={2}>
   <Card title="Guía de instalación" icon="screwdriver-wrench" href="/instalacion">

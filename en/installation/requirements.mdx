@@ -6,6 +6,10 @@ description: "Verify electrical, network, documentation, and kit requirements be
 
 Before starting any installation, make sure all requirements on this page are met. Proper preparation prevents errors during mounting and ensures connectivity for all devices.
 
+<Warning>
+  Any work on 230V circuits must be performed exclusively by a qualified electrician. Isolate, lock out, and verify the circuit before touching it, follow local electrical regulations, and confirm that the panel protections are suitable.
+</Warning>
+
 ## Prior documentation
 
 <Note>
@@ -30,10 +34,16 @@ Defined 230V power points per device:
 - **RJ45 (male)** network outlet for each Hub
 - **PoE switch** or outlet with 24/7 power for each Hub
 
+### Recommended topology
+
+- Install **one VolticHub per floor**. If a floor is split into independent radio zones, add a Hub or repeaters according to the coverage survey.
+- As a reference, each Hub can manage approximately **150 devices**. For robust radio coverage, assign **10–15 rooms** to each Hub.
+- Rooms assigned to a Hub must be on the **same floor**. Add Zigbee repeaters when distance, partitions, or building materials reduce the signal.
+
 ### Wi-Fi and Zigbee coverage
 
 <Warning>
-  **Leave the hotel Wi-Fi channel 11 free.** The Voltic Zigbee system operates in the 2.4 GHz band, on the same frequency as Wi-Fi channel 11. Make sure the hotel APs do not use that channel to minimize interference and ensure Voltic network stability.
+  The Hub uses **Zigbee channel 25** by default, which can overlap with **Wi-Fi channel 11**. Configure the hotel's access points to avoid channel 11 and reduce collisions and interference that could affect Voltic network stability.
 </Warning>
 
 - 24/7 power for each Zigbee repeater
@@ -47,7 +57,11 @@ Defined 230V power points per device:
 - Each box must have a label with the corresponding **room number**
 - Do not install devices in a room that does not match the kit numbering
 
-![Voltic Freeline Kit](https://r2.voltic.es/media/installation-docs-assets/devices/freeline/verificacion-kit-freeline.webp)
+![Voltic Freeline Kit (Room Control)](https://r2.voltic.es/media/installation-docs-assets/devices/freeline/verificacion-kit-freeline.webp)
+
+<Note>
+  **Voltic Freeline** identifies the room-control system and its kit; **Voltic FrostLine** is the thermostat. They are different products.
+</Note>
 
 ## Next step
 
