@@ -1,0 +1,247 @@
+---
+title: "Cooling Patrol: Operation, Alerts, and History"
+sidebarTitle: "Operation"
+description: "Configure alerts and thresholds, operate Cooling Patrol every day, review history, and document HACCP deviations."
+---
+
+This guide covers daily Cooling Patrol work after installation: setting each room's range, reviewing status, responding to a deviation, and preserving evidence when the site's procedure requires it.
+
+<Note>
+  The text and paths in this guide follow the current [app.voltic.es](https://app.voltic.es) interface. The app version, user role, and building configuration can change what appears. The [screenshot inventory](/en/cooling-patrol/screenshot-inventory) lists pending captures and the details that must be confirmed before definitive values are published.
+</Note>
+
+## Screens involved
+
+| Screen in the app | Purpose |
+| --- | --- |
+| **Cooling Patrol > Overview** | Cold-room status, online/offline sensors, active alerts, average temperature, compliance, trend, and recent alerts. |
+| **Sensor details** | Current reading, allowed range, status, battery, last update, history, and communication data. |
+| **CoolingPatrol Alerts** | Individual or bulk configuration of ranges and advanced alert parameters. |
+| **HACCP > Register** | Deviation records, status and date filters, search, and table export. |
+| **HACCP > Reports** | Daily, weekly, or monthly report, per-sensor charts, and PDF download. |
+| **HACCP incident details** | Deviation facts, cause, corrective action, affected product, and final review. |
+
+## Configure alerts and thresholds
+
+### Configure one sensor
+
+<Steps>
+  <Step title="Open the configuration">
+    In the building view, open the **CoolingPatrol Alerts** tab. Check each sensor's name and location before editing it.
+  </Step>
+  <Step title="Define the range">
+    Turn on **Alert enabled** and define **Minimum** and **Maximum**. The range must come from the product preservation plan and the site's procedure, not from a generic recommendation.
+  </Step>
+  <Step title="Review advanced settings">
+    If available, open **Advanced alert settings**:
+
+    - **Hysteresis:** margin the system applies around a limit; confirm with the technical team how it affects alerts.
+    - **Cooldown:** minimum time between consecutive notifications.
+    - **Breach duration:** time the reading must remain out of range before creating a deviation.
+  </Step>
+  <Step title="Save and check">
+    Save the configuration and return to **Cooling Patrol > Overview**. Check that the range appears beside the sensor and that its status is not **Not configured**. Record who approved the range and when it changed.
+  </Step>
+</Steps>
+
+<Warning>
+  In the current interface, administrators and installers can edit these alerts; other roles may see them read-only. Confirm the building's permission matrix before using this behavior as an operational control.
+</Warning>
+
+### Apply one configuration to several sensors
+
+In **CoolingPatrol Alerts**, select the sensors and use the bulk configuration. The app warns that the complete configuration will be applied to every selected sensor and replace its previous settings. Check locations before confirming: a chilled-food room and a freezer will normally use different ranges.
+
+<Note>
+  Do not publish default values, maximum numeric limits, notification channels, or escalation rules until the technical team confirms them. The screen shows the fields, but the correct value depends on the product and service contract.
+</Note>
+
+## Daily operation
+
+### At the start of a shift
+
+1. Open **Cooling Patrol > Overview** and select the relevant period.
+2. Check the overall indicator, the number of **Online** and **Offline** rooms, and **Active alerts**.
+3. Review **Critical** rooms first, then **Warnings**, **Close to limit**, and **No data**.
+4. Open the details of any sensor with an old reading, low battery, or incorrect location.
+5. If the Cooling Patrol Hub is offline, start the connectivity-loss procedure before accepting the overview as current.
+
+### During the shift
+
+- Check new alerts and assign a responsible person to each one.
+- Do not close an alert just because a reading briefly returns to range: verify the cause and record it.
+- Avoid opening the room longer than necessary and do not move the sensor during an investigation.
+- If the sensor has no data, take a manual measurement and record the time, instrument, and result.
+
+### At the end of a shift
+
+- Confirm that every alert has an owner and no HACCP incident is still undocumented.
+- Export the period if the site's procedure requires it.
+- Record threshold changes, battery replacements, network incidents, and corrective actions in the maintenance log.
+
+### States shown by the app
+
+| State | Operational meaning |
+| --- | --- |
+| **In range** | The latest available reading is inside the configured range. |
+| **Close to limit** | The reading is close to one of the limits; watch the trend. |
+| **Out of range** | The reading is above the maximum or below the configured minimum. |
+| **No data** | There is no recent usable reading; it is not a safe-temperature reading. |
+| **Alert off** | The sensor's alert is not enabled. |
+| **Not configured** | A complete range is missing, so the reading cannot be evaluated. |
+
+## History, trends, and export
+
+### Review one sensor's history
+
+From **Cooling Patrol > Overview**, select a room and open **Sensor details**. The screen shows the current reading, allowed range, status, battery percentage and voltage, last update, and a **Temperature history** chart.
+
+In the interface observed, the sensor chart represents the last 24 hours with 15-minute averages and marks the configured limits. Confirm this interval before turning it into a control or audit requirement.
+
+### Review a period
+
+In **Overview**, switch between **Daily**, **Weekly**, and **Monthly**, and adjust the **From** and **To** dates. When enough data is available, the panel calculates:
+
+- average temperature for the period;
+- compliance, meaning time within range;
+- online/offline room count;
+- active alerts split into critical and warning;
+- average trend and recent alerts.
+
+### HACCP register and reports
+
+The **HACCP** area has three tabs:
+
+- **Register:** filter **All**, **Open**, **Resolved**, or **Reviewed**, by date, and search by sensor or location. The table shows start, excursion, duration, and status.
+- **Alerts:** review each sensor's range and state and open its advanced configuration.
+- **Reports:** choose a **Daily**, **Weekly**, or **Monthly** period, select the date, and enable **Include charts per sensor** when needed.
+
+The **Download PDF** button generates the self-control report. It includes the establishment, period and time zone, sensors, deviations, coverage, out-of-range sensors, minimum/average/maximum readings, and deviations for the period. The register also offers **CSV** or **XLS** table export when the export controls are shown.
+
+<Tip>
+  Keep the exported file with its period, building time zone, procedure version, and downloader. An export is a snapshot and does not replace the corrective-action record.
+</Tip>
+
+## Connectivity loss
+
+### If the Cooling Patrol Hub is offline
+
+The app shows a warning that the gateway/Hub is not responding and that the data shown is the last reading received. Follow this order:
+
+1. Check the USB-C power supply and make sure the Hub has not been moved or unplugged.
+2. Check the Ethernet cable and network port; if it uses Wi-Fi, verify that the network and password are still available.
+3. Check whether other devices in the same building are connected.
+4. Do not treat old readings as current. Take manual measurements in the affected rooms.
+5. When the connection returns, wait for **Last update** to refresh and confirm that each sensor returns to **Online**.
+6. If it does not recover, record the start and end time, Hub serial number, and manual measurements, then contact [support](/en/support/contact).
+
+### If only one sensor shows no data
+
+- Open its details and check **Last update**, battery, and signal data.
+- Check that the sensor is still in the labelled location and has not been covered, wet, or damaged.
+- Check the battery using the model manual; do not swap cells or open the enclosure unless the procedure allows it.
+- If the other sensors work, do not change thresholds to hide the issue.
+
+<Warning>
+  The exact timeout that moves a sensor to **No data**, the reading cadence, and reconnection behavior require technical confirmation. Until then, apply the site's manual procedure.
+</Warning>
+
+## Batteries and maintenance
+
+Sensor details show **battery percentage** and, when sent by the device, **battery voltage**. Use both values to plan maintenance, but do not turn a percentage into a replacement date without the manufacturer's table.
+
+### Recommended routine
+
+- Check percentage, voltage, and last-update date weekly.
+- Inspect the enclosure, screws, cable glands, and seals without removing protection unnecessarily.
+- Clean the outside with a dry cloth; do not spray liquid on the sensor.
+- Check for condensation, ice, corrosion, or impact damage.
+- Record date, sensor, location, readings before/after, removed cell, installed cell, and responsible person.
+- After any intervention, confirm a stable reading and the correct alert state in the app.
+
+<Note>
+  The sensor type, capacity, expected life, polarity, replacement procedure, and protection rating are not defined in this documentation. They must come from the technical manual for the installed model.
+</Note>
+
+## Calibration and placement
+
+### Place the sensor
+
+Install the sensor at a representative point for the stored product and leave room for air circulation. Avoid:
+
+- direct airflow from the evaporator or fan;
+- immediate proximity to the door, seals, or warm-air inlets;
+- direct contact with walls, ceiling, floor, trays, or product;
+- areas where it can be hit, wetted, iced over, or covered;
+- moving it to another room without updating its name and location in the app.
+
+Use the fixing method and orientation in the model manual. After installation, wait for the reading to stabilize before comparing it with the allowed range.
+
+### Check a reading
+
+1. Use an identified reference thermometer with current calibration.
+2. Place it beside the measurement point without blocking the sensor.
+3. Compare several stable readings and record date, time, instruments, temperature, difference, and responsible person.
+4. If the difference exceeds the procedure's tolerance, keep the record, mark the sensor for review, and contact support.
+5. Do not enter a manual offset in the app unless the technical team confirms that the model and version support it.
+
+<Warning>
+  No offset or calibration control was found in the current interface. The tolerance, calibration interval, reference point, and ability to correct a reading require technical confirmation.
+</Warning>
+
+## Sensor troubleshooting
+
+| Symptom | Safe checks | Next action |
+| --- | --- | --- |
+| No reading | Last update, Hub state, battery, and signal. | Take a manual measurement; if the Hub is online and the sensor remains silent, open an incident. |
+| Out of range | Verify with a reference thermometer, door, evaporator, and refrigeration equipment. | Protect the product and follow the critical-alert procedure. |
+| Unstable reading | Location, contact with surfaces, ice/condensation, and impact. | Do not move it during the check; document and request review if it persists. |
+| Low battery | Percentage, voltage, and last replacement date. | Replace only with the approved procedure and cell. |
+| Missing humidity or secondary data | If the model sends it, check last update and communication. | Do not fill the value manually; confirm compatibility with support. |
+| Sensor assigned to the wrong room | Name, location, serial number, and physical label. | Correct the assignment through the onboarding procedure and record the change. |
+
+## Critical-alert procedure
+
+<Steps>
+  <Step title="Confirm the alert without delaying the response">
+    Open the sensor and record the reading, limit, time, and duration shown. If it shows **No data** or **Offline**, treat it as a monitoring loss and take a manual measurement.
+  </Step>
+  <Step title="Protect and verify the product">
+    Keep the door closed, limit openings, and check the room with a reference instrument. Follow the HACCP plan and the food-safety responsible person's instructions to hold, move, or release product.
+  </Step>
+  <Step title="Find the cause and escalate">
+    Check refrigeration equipment power, door and seals, evaporator, condensation, load, and connectivity. Notify the shift lead and maintenance. Do not change the threshold to make the alert disappear.
+  </Step>
+  <Step title="Document the deviation">
+    In **HACCP > Register**, open the incident and complete at least **Cause**, **Corrective action**, and, when applicable, **Affected product**, **Lot**, **Quantity**, **Product disposition**, and **Responsible**. Use **Save without resolving** if the investigation is still open.
+  </Step>
+  <Step title="Resolve and review">
+    Resolve only after the room has returned to range and the corrective action has been checked. An authorised reviewer can use **Review and lock**; a reviewed incident is locked against later changes.
+  </Step>
+</Steps>
+
+<Warning>
+  The label **Critical** and the rules distinguishing it from **Warning** must be confirmed with the technical team and the site's HACCP plan. The app does not replace a food-safety decision.
+</Warning>
+
+## Preservation and traceability when applicable
+
+If the site follows a HACCP or equivalent procedure, preserve at least the evidence required by that procedure:
+
+- the report PDF and, when used, CSV/XLS export of the register;
+- covered period and building time zone;
+- sensor, location, serial number, and current range;
+- start, recovery, duration, limit, initial, peak, and final temperature for each deviation;
+- cause, corrective action, product/lot/quantity, disposition, and responsible person;
+- manual measurements and calibration checks;
+- battery changes, maintenance, and connectivity loss;
+- who resolved and who reviewed/locked the incident.
+
+The app distinguishes **Open**, **Resolved**, and **Reviewed** incidents. Before using it as an official record, confirm the retention period, required signature or lock, accepted format, responsible authority, and backup plan. These requirements depend on jurisdiction, product, and the site's procedure.
+
+## Related articles
+
+- [Cooling Patrol installation guide](/en/cooling-patrol/installation)
+- [Screenshot inventory](/en/cooling-patrol/screenshot-inventory)
+- [Frequently asked questions](/en/support/faq)
+- [Contact support](/en/support/contact)

@@ -1,0 +1,73 @@
+---
+title: "Cooling Patrol: inventario de pantallas y capturas"
+sidebarTitle: "Inventario de capturas"
+description: "Inventario editorial de las pantallas de Cooling Patrol, capturas disponibles y datos técnicos pendientes de confirmación."
+---
+
+Esta página es el inventario de trabajo para ilustrar la documentación de Cooling Patrol. Solo se enlazan recursos públicos ya comprobados; las capturas pendientes deben obtenerse en un edificio de demostración o con datos anonimizados antes de publicarse.
+
+## Inventario
+
+| Pantalla o recurso | Ruta o entrada en la app | Qué debe mostrar | Estado |
+| --- | --- | --- | --- |
+| Conexión Wi‑Fi del Hub | Asistente de conexión | Selección de la red del Hub y alta en la Wi‑Fi del establecimiento. | **Disponible:** [UI WiFi connect](https://cdn.voltic.es/media/cooling-patrol/product/ui_wifi_connect.webp) |
+| Identificación del sensor | Etiqueta/alta por QR | Nombre Cooling Patrol, código QR y número de serie sin datos de cliente. | **Pendiente de captura** |
+| Resumen Cooling Patrol | `Cooling Patrol > Resumen` | Indicadores de cámaras, Online/Offline, alertas activas, temperatura media, cumplimiento, tendencia y últimas alertas. | **Pendiente de captura** |
+| Hub offline y pérdida de datos | Aviso del Resumen | Aviso de gateway/Hub sin conexión, última lectura recibida y estado **Sin datos** de los sensores afectados. | **Pendiente de captura** |
+| Estado de una cámara | Lista de sensores del Resumen | Búsqueda, filtros Todas/Online/Alertas/Offline, estado, rango, batería y última actualización. | **Pendiente de captura** |
+| Detalle del sensor | Seleccionar una cámara | Temperatura actual, rango permitido, estado, batería, voltaje, historial, humedad/señal si están disponibles, Hub, ubicación y número de serie anonimizado. | **Pendiente de captura** |
+| Alertas CoolingPatrol: individual | Vista del edificio > `Alertas CoolingPatrol` | Activación, mínimo, máximo y guardado de una alerta. | **Pendiente de captura** |
+| Alertas CoolingPatrol: avanzada | `Configuración avanzada de la alerta` | Histéresis, espera entre avisos y duración antes de incidencia. | **Pendiente de captura** |
+| Alertas CoolingPatrol: masiva | Selección de varios sensores | Sustitución de la configuración completa y resultado por sensor. | **Pendiente de captura** |
+| APPCC: Registro | `APPCC > Registro` | Filtros de estado/fecha, búsqueda, inicio, excursión, duración, estado y exportación de tabla. | **Pendiente de captura** |
+| APPCC: Alertas | `APPCC > Alertas` | Estado de cada alerta, sensor, ubicación y apertura de configuración. | **Pendiente de captura** |
+| APPCC: Informes | `APPCC > Informes` | Periodo, fecha, opción de gráficas por sensor, resumen y botón `Descargar PDF`. | **Pendiente de captura** |
+| Detalle del expediente | Abrir un registro del APPCC | Inicio, recuperación, límite, pico, causa, medida correctiva, producto/lote, destino, responsable y revisión/bloqueo. | **Pendiente de captura** |
+| Informe PDF | `Descargar PDF` | Documento de autocontrol con periodo, zona horaria, control por sensor y desviaciones. | **Pendiente de muestra anonimizada** |
+
+La imagen del sensor [front_nb.png](https://cdn.voltic.es/media/cooling-patrol/product/front_nb.png) es un recurso de producto, no una captura de la app. Puede utilizarse para identificar el dispositivo mientras se esperan las capturas de interfaz.
+
+## Criterios para capturar
+
+- Utiliza un edificio y sensores de demostración; elimina nombres de clientes, direcciones, números de serie, correos y cualquier dato personal.
+- Captura el estado normal y, cuando sea posible, un ejemplo controlado de **Fuera de rango**, **Sin datos** y **Offline** sin alterar una instalación real.
+- Conserva la zona horaria visible, las unidades °C y el nombre exacto de los controles.
+- Entrega las imágenes en WebP o PNG, con el mismo recorte y resolución para español e inglés.
+- Guarda junto a cada imagen la versión de la app, el rol utilizado, la fecha y el permiso para publicarla.
+
+## Confirmaciones técnicas antes de publicar
+
+| Dato | Por qué hay que confirmarlo |
+| --- | --- |
+| Valores predeterminados y rangos máximos/mínimos de umbral, histéresis, espera y duración | La app muestra los campos, pero el rango válido y el valor inicial pueden depender de la versión y del producto conservado. |
+| Canales, destinatarios, repetición y escalado de las notificaciones | La interfaz observada permite configurar la alerta, pero no documenta aquí cómo se envían ni quién las recibe. |
+| Cadencia de lectura, tiempo para pasar a **Sin datos** y comportamiento al reconectar | Determina cuándo una lectura deja de ser utilizable y qué evidencia debe tomarse manualmente. |
+| Tiempo de arranque del Hub y espera de 30–60 minutos tras el alta | Son tiempos operativos que aparecen en la guía de instalación y deben validarse para el hardware y el firmware desplegados. |
+| Tipo, capacidad, autonomía, polaridad, sustitución y grado de protección de la batería/sensor | No aparecen definidos en esta documentación y no deben inferirse de otros sensores Voltic. |
+| Punto de colocación, tolerancia, intervalo y método de calibración; soporte de offset | Son requisitos metrológicos y de instalación que deben salir del manual del modelo y del procedimiento del establecimiento. |
+| Definición de **Crítica** frente a **Advertencia** | La app muestra ambas etiquetas, pero el criterio operativo debe coincidir con el plan APPCC. |
+| Periodo de conservación, firma/bloqueo, formato válido, copias de seguridad y autoridad revisora | La aplicación ofrece estados y exportaciones, pero la validez como registro oficial depende de la jurisdicción y del procedimiento aplicable. |
+| Matriz de permisos para administrar alertas, resolver y revisar expedientes | Los controles visibles cambian según el rol; hay que validar quién puede ejecutar cada acción. |
+
+### Valores observados en la interfaz (no publicar todavía)
+
+La validación actual de la app muestra estos límites y valores iniciales. Son una referencia de implementación, no una especificación aprobada:
+
+| Campo | Observado | Confirmación pendiente |
+| --- | --- | --- |
+| Alerta activada | El formulario nuevo aparece activado. | Política de alta para sensores ya instalados. |
+| Umbral mínimo/máximo | Entradas entre −100 y 100 °C; el máximo debe ser mayor que el mínimo. | Rango operativo permitido por producto y si coincide con el control visual. |
+| Rango visual permitido | El control deslizante de rango muestra −20 a 20 °C. | Resolver la diferencia con la validación −100 a 100 °C antes de documentarla. |
+| Histéresis | 0–50 °C; valor inicial observado: 0 °C. | Significado operativo y valor recomendado por instalación. |
+| Espera entre avisos | 1–10.080 min; valor inicial observado: 60 min. | Mínimo, máximo y política de repetición. |
+| Duración antes de incidencia | 0–1.440 min; valor inicial observado: 5 min. | Si el valor 0 está permitido para todos los modelos y cuándo se crea el expediente. |
+
+<Warning>
+  Hasta cerrar estas confirmaciones, describe los controles como **disponibles en la interfaz observada** y no como requisitos, valores por defecto ni garantía de cumplimiento normativo.
+</Warning>
+
+## Enlaces relacionados
+
+- [Operación, alertas e historial](/cooling-patrol/operacion)
+- [Guía de instalación](/cooling-patrol/instalacion)
+- [Contactar con soporte](/soporte/contacto)

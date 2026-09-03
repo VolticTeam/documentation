@@ -148,7 +148,8 @@
                 "group": "Empezar",
                 "icon": "rocket",
                 "pages": [
-                  "cooling-patrol/index"
+                  "cooling-patrol/index",
+                  "cooling-patrol/inventario-capturas"
                 ]
               },
               {
@@ -156,6 +157,13 @@
                 "icon": "screwdriver-wrench",
                 "pages": [
                   "cooling-patrol/instalacion"
+                ]
+              },
+              {
+                "group": "Operar",
+                "icon": "chart-line",
+                "pages": [
+                  "cooling-patrol/operacion"
                 ]
               },
               {
@@ -291,7 +299,8 @@
                 "group": "Get started",
                 "icon": "rocket",
                 "pages": [
-                  "en/cooling-patrol/index"
+                  "en/cooling-patrol/index",
+                  "en/cooling-patrol/screenshot-inventory"
                 ]
               },
               {
@@ -299,6 +308,13 @@
                 "icon": "screwdriver-wrench",
                 "pages": [
                   "en/cooling-patrol/installation"
+                ]
+              },
+              {
+                "group": "Operate",
+                "icon": "chart-line",
+                "pages": [
+                  "en/cooling-patrol/operation"
                 ]
               },
               {

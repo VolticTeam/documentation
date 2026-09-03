@@ -4,16 +4,44 @@ sidebarTitle: "Descripción general"
 description: "Cooling Patrol es el sistema Voltic para monitorizar la temperatura de cámaras frigoríficas y espacios de refrigeración comercial."
 ---
 
-Cooling Patrol es la solución de Voltic para la monitorización inalámbrica de la temperatura en cámaras frigoríficas, frigoríficos comerciales y otros espacios de refrigeración. Los sensores reportan la temperatura en tiempo real a través de la plataforma [app.voltic.es](https://app.voltic.es), donde puedes configurar alertas y consultar el historial.
+Cooling Patrol es la solución de Voltic para la monitorización inalámbrica de la temperatura en cámaras frigoríficas, frigoríficos comerciales y otros espacios de refrigeración. Los sensores reportan sus lecturas a través de la plataforma [app.voltic.es](https://app.voltic.es), donde puedes revisar el estado de las cámaras, configurar alertas, consultar el historial y preparar el registro APPCC.
+
+<Note>
+  Los nombres de las pantallas de esta guía corresponden a la interfaz actual. Pueden variar según el rol del usuario, la versión de la aplicación o la configuración del edificio. La [guía de instalación](/cooling-patrol/instalacion) conserva el procedimiento de alta y conexión del sistema.
+</Note>
 
 ## Componentes del sistema
 
-- **Hub Cooling Patrol** (se conecta por Ethernet o Wi-Fi)
-- **Sensores de temperatura Cooling Patrol** (inalámbricos, se instalan dentro de cada cámara)
+| Componente | Función |
+| --- | --- |
+| **Hub Cooling Patrol** | Recibe los sensores y comunica sus lecturas mediante Ethernet o Wi‑Fi. |
+| **Sensores de temperatura Cooling Patrol** | Miden la temperatura dentro de cada cámara y muestran, cuando el dispositivo lo proporciona, humedad y estado de batería. |
+| **app.voltic.es** | Permite ver el resumen, el estado de cada cámara, las alertas, el historial y los informes APPCC. |
+
+![Sensor Cooling Patrol](https://cdn.voltic.es/media/cooling-patrol/product/front_nb.png)
+
+## Flujo de trabajo
+
+1. El sensor toma una lectura y la envía al Hub Cooling Patrol.
+2. El Hub comunica la lectura a [app.voltic.es](https://app.voltic.es).
+3. La app compara la lectura con el rango configurado y muestra estados como **En rango**, **Rozando el límite**, **Fuera de rango**, **Sin datos**, **Alerta apagada** o **No configurado**.
+4. Las desviaciones se consultan en **Cooling Patrol > Resumen** y se documentan en **APPCC > Registro** cuando el procedimiento del establecimiento lo requiera.
+
+<Warning>
+  Una lectura antigua o el estado **Sin datos** no confirma que la cámara esté a una temperatura segura. Ante una pérdida de conectividad, realiza una comprobación manual y sigue el plan de seguridad alimentaria del establecimiento.
+</Warning>
 
 <CardGroup cols={2}>
   <Card title="Guía de instalación" icon="screwdriver-wrench" href="/cooling-patrol/instalacion">
     Instala el Hub y los sensores paso a paso, desde la evaluación del emplazamiento hasta la verificación en la app.
+  </Card>
+
+  <Card title="Operación, alertas e historial" icon="chart-line" href="/cooling-patrol/operacion">
+    Configura rangos, atiende alertas, revisa tendencias y descarga la información necesaria.
+  </Card>
+
+  <Card title="Inventario de capturas" icon="camera" href="/cooling-patrol/inventario-capturas">
+    Consulta qué pantallas necesitan captura y qué datos técnicos siguen pendientes de confirmar.
   </Card>
 
   <Card title="Contactar soporte" icon="headset" href="/soporte/contacto">
