@@ -157,5 +157,18 @@
   },
   "interaction": {
     "drilldown": true
+  },
+  "navbar": {
+    "links": [
+      {
+        "href": "https://app.voltic.es",
+        "label": "Ir a la app"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Contactar",
+      "href": "https://voltic.odoo.com/book/soporte"
+    }
   }
 }
