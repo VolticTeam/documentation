@@ -1,0 +1,77 @@
+---
+title: "Operar FrostLine en un hotel"
+sidebarTitle: "Operación de FrostLine"
+description: "Gestiona el Voltic FrostLine de cada habitación dentro de Hotel Room Control y comprueba sus automatizaciones."
+---
+
+En un hotel, el Voltic FrostLine no funciona de forma aislada: recibe la consigna del sistema Room Control y trabaja junto con el VolticHub, los sensores de presencia y los sensores de ventana.
+
+## Qué controla FrostLine
+
+- La temperatura de consigna de la habitación.
+- El modo de climatización configurado para el proyecto.
+- La válvula o válvulas del fan coil según el esquema aprobado.
+- Las velocidades de ventilador V1, V2 y V3.
+
+En una instalación de 4 tubos o de fan coil con suelo radiante hidráulico, la secuencia de frío, calor y prioridades es la definida en el proyecto. No cambies esa configuración desde una habitación sin validar antes el esquema con mantenimiento o soporte.
+
+## Comportamiento según el estado de la habitación
+
+| Modo | Ventana | Presencia | Comportamiento de FrostLine |
+| --- | --- | --- | --- |
+| ECO | Cerrada | Detectada | Regula el fan coil según la consigna ECO. |
+| ECO | Cerrada | No detectada durante el temporizador | Apaga la climatización al finalizar el temporizador de presencia (5 minutos por defecto). |
+| CONFORT | Cerrada | Detectada o no detectada | Mantiene la consigna de confort configurada. |
+| ECO o CONFORT | Abierta durante el temporizador | Cualquiera | Desactiva la climatización al finalizar el temporizador de ventana. |
+
+La tabla describe el comportamiento de Room Control; consulta la guía de [modos ECO y CONFORT](/operacion/modos-funcionamiento) para cambiar los temporizadores y las consignas de forma centralizada.
+
+## Flujo operativo del hotel
+
+<Steps>
+  <Step title="Configura el comportamiento global">
+    Define las consignas ECO y CONFORT y los temporizadores de presencia y ventana desde el Panel de Control.
+  </Step>
+  <Step title="Supervisa las habitaciones">
+    Comprueba en [app.voltic.es](https://app.voltic.es) que el FrostLine está conectado, reporta temperatura y pertenece a la habitación correcta.
+  </Step>
+  <Step title="Actúa ante una incidencia">
+    Identifica si el problema afecta a la red Zigbee, al sensor, a la plataforma o a la salida del fan coil antes de intervenir en el cableado.
+  </Step>
+  <Step title="Valida la reparación">
+    Prueba una consigna, la válvula, las tres velocidades y la reacción a ventana y presencia antes de devolver la habitación a operación.
+  </Step>
+</Steps>
+
+## Comprobaciones rápidas
+
+| Síntoma | Comprobación inicial |
+| --- | --- |
+| FrostLine sin conexión | Revisa el VolticHub de la planta, los repetidores y la habitación asignada. |
+| Temperatura sin actualizar | Comprueba la conectividad del FrostLine y espera a que el estado se actualice en la plataforma. |
+| Fan coil sin respuesta | Verifica el modo activo, la consigna y la salida correspondiente sin abrir el equipo energizado. |
+| Se apaga con huésped dentro | Comprueba el sensor de presencia, el temporizador y que la ventana no esté reportando abierta. |
+| Se mantiene encendido con la habitación vacía | Comprueba si está seleccionado CONFORT; en ECO debe apagarse tras el temporizador de ausencia. |
+
+<Warning>
+  No abras ni vuelvas a cablear un FrostLine energizado. Las comprobaciones eléctricas corresponden a personal electricista cualificado con el circuito aislado y verificado.
+</Warning>
+
+## Mantenimiento y cambios de habitación
+
+Antes de sustituir un FrostLine o mover un kit:
+
+1. Registra la habitación, la referencia del dispositivo y el firmware.
+2. Desvincula y vuelve a incluir el equipo siguiendo el procedimiento del VolticHub.
+3. Comprueba que la asociación de habitación y las automatizaciones se conservan.
+4. Ejecuta la validación completa de la habitación antes de ponerla de nuevo a disposición del hotel.
+
+No intercambies kits entre habitaciones: cada kit está preconfigurado para una habitación concreta.
+
+## Artículos relacionados
+
+- [Modos ECO y CONFORT](/operacion/modos-funcionamiento)
+- [Funcionamiento de los sensores](/operacion/sensores)
+- [Temperaturas recomendadas](/operacion/temperaturas-recomendadas)
+- [Instalar FrostLine en un hotel](/instalacion/voltic-frostline-hotel)
+- [Contactar con soporte](/soporte/contacto)

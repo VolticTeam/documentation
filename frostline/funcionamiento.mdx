@@ -1,0 +1,53 @@
+---
+title: "Funcionamiento de FrostLine en viviendas"
+sidebarTitle: "Funcionamiento"
+description: "Configura y utiliza el termostato Voltic FrostLine en viviendas con VolticHub o hubs Zigbee de Tuya."
+---
+
+FrostLine puede funcionar localmente desde el termostato o de forma remota mediante un VolticHub o un Hub Zigbee compatible con Tuya. La interfaz, los nombres de los menús y las funciones disponibles pueden variar según el Hub y su firmware.
+
+## Configuración inicial
+
+<Steps>
+  <Step title="Comprueba el cableado y energiza el equipo">
+    Verifica que el esquema corresponde a tu instalación y que las protecciones están cerradas. La puesta en tensión debe realizarla personal electricista cualificado.
+  </Step>
+  <Step title="Vincula FrostLine al Hub elegido">
+    Añade el dispositivo desde la plataforma Voltic o desde Tuya Smart / Smart Life, según el Hub instalado. Sigue el procedimiento de inclusión indicado por ese Hub.
+  </Step>
+  <Step title="Selecciona el escenario de climatización">
+    Configura el tipo de instalación (2 tubos, 4 tubos o fan coil con suelo radiante) solo si aparece disponible para tu versión y coincide con el esquema validado.
+  </Step>
+  <Step title="Ajusta consigna y ventilación">
+    Define el modo de frío o calor, la temperatura de consigna y la velocidad del ventilador. En instalaciones de 4 tubos o combinadas, comprueba también las prioridades de cada circuito.
+  </Step>
+  <Step title="Prueba cada salida">
+    Comprueba por separado la válvula, las velocidades V1/V2/V3 y, cuando exista, el actuador del suelo radiante. No des por válida la instalación solo porque la pantalla se encienda.
+  </Step>
+</Steps>
+
+## Comportamiento por escenario
+
+| Instalación | Funcionamiento que debes comprobar |
+| --- | --- |
+| Fan coil de 2 tubos | Cambio de frío/calor, apertura de la válvula y respuesta de V1/V2/V3. |
+| Fan coil de 4 tubos | Selección independiente de frío y calor, sus válvulas y la prioridad definida en el proyecto. |
+| Fan coil + suelo radiante hidráulico | Demanda del fan coil, demanda del actuador del suelo y la prioridad o secuencia acordada. |
+
+La secuencia real depende del esquema aprobado; consulta [la matriz de compatibilidad](/frostline/compatibilidad) antes de modificarla.
+
+## Uso diario
+
+- Cambia la consigna desde el termostato o desde la aplicación del Hub.
+- Selecciona frío o calor según la temporada y la configuración de la instalación.
+- Ajusta la velocidad del ventilador cuando el sistema lo permita.
+- Usa horarios o automatizaciones del Hub elegido si están disponibles para tu modelo.
+- Comprueba que la temperatura medida se estabiliza antes de cambiar varias consignas seguidas.
+
+## Si algo no funciona
+
+1. Comprueba que FrostLine aparece conectado en la plataforma seleccionada.
+2. Verifica que el Hub está en la red y que el dispositivo no está vinculado a otra cuenta.
+3. Revisa el esquema de bornes y la tensión de cada carga sin energizar durante la inspección.
+4. Prueba una salida cada vez y anota el resultado.
+5. Contacta con [soporte Voltic](/soporte/contacto) con la referencia del equipo, firmware, Hub y esquema de instalación.

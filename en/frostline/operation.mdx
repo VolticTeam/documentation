@@ -1,0 +1,53 @@
+---
+title: "Standalone FrostLine Operation"
+sidebarTitle: "Operation"
+description: "Configure and use the Voltic FrostLine thermostat in homes with a VolticHub or a Tuya Zigbee Hub."
+---
+
+FrostLine can operate locally from the thermostat or remotely through a VolticHub or a Tuya-compatible Zigbee Hub. The interface, menu names, and available features may vary by Hub and firmware.
+
+## Initial setup
+
+<Steps>
+  <Step title="Check the wiring and power the device">
+    Verify that the diagram matches your installation and that protections are in place. Power-up must be performed by a qualified electrician.
+  </Step>
+  <Step title="Pair FrostLine with the selected Hub">
+    Add the device from the Voltic platform or Tuya Smart / Smart Life, depending on the installed Hub. Follow that Hub's inclusion procedure.
+  </Step>
+  <Step title="Select the HVAC scenario">
+    Configure the installation type (2-pipe, 4-pipe, or fan coil with underfloor heating) only if it is available for your version and matches the validated diagram.
+  </Step>
+  <Step title="Set the temperature and fan control">
+    Set heating or cooling, the temperature setpoint, and fan speed. For 4-pipe or combined installations, also check each circuit's priorities.
+  </Step>
+  <Step title="Test each output">
+    Test the valve, V1/V2/V3 fan speeds, and, where present, the underfloor actuator separately. Do not approve the installation just because the display turns on.
+  </Step>
+</Steps>
+
+## Scenario behavior
+
+| Installation | What to verify |
+| --- | --- |
+| 2-pipe fan coil | Heating/cooling changeover, valve opening, and V1/V2/V3 response. |
+| 4-pipe fan coil | Independent heating and cooling selection, both valves, and the project-defined priority. |
+| Fan coil + hydronic underfloor heating | Fan-coil demand, underfloor-actuator demand, and the agreed priority or sequence. |
+
+The actual sequence depends on the approved diagram; check [the compatibility matrix](/en/frostline/compatibility) before changing it.
+
+## Daily use
+
+- Change the setpoint from the thermostat or the Hub app.
+- Select heating or cooling according to the season and installation configuration.
+- Adjust fan speed when supported by your model.
+- Use schedules or Hub automations when they are available for your model.
+- Allow the measured temperature to stabilize before changing several setpoints in succession.
+
+## If something does not work
+
+1. Check that FrostLine appears connected on the selected platform.
+2. Verify that the Hub is online and the device is not paired to another account.
+3. Review terminal mapping and each load's voltage without energizing the circuit during inspection.
+4. Test one output at a time and record the result.
+5. Contact [Voltic support](/en/support/contact) with the device reference, firmware, Hub, and installation diagram.

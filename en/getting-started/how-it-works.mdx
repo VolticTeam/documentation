@@ -10,8 +10,8 @@ Voltic Smart Room Control is a BMS (Building Management System) designed specifi
 
 | Device | Function |
 | --- | --- |
-| **VolticHub** | Zigbee coordinator. Connects via Ethernet or Wi-Fi and centralizes all sensors on the floor. |
-| **Voltic FrostLine** | Smart digital thermostat. Controls the room fan coil (2-pipe / 2-way). |
+| **VolticHub** | Zigbee coordinator. Connects via Ethernet or Wi-Fi and centralizes devices for its floor. |
+| **Voltic FrostLine** | Smart digital thermostat. Controls the room fan coil according to the validated diagram; the usual profile is 2-pipe / 2-way, with 4-pipe or hydronic underfloor heating when the project, version, and firmware support it. |
 | **Voltic Switch** | Smart contactor in the electrical panel. Controls lighting and TV subcircuits. |
 | **Presence sensor (PIR)** | Detects whether people are in the room or bathroom. |
 | **Contact sensor** | Detects whether a window or door is open or closed. |
@@ -23,7 +23,7 @@ Voltic Smart Room Control is a BMS (Building Management System) designed specifi
     The VolticHub receives real-time status from Zigbee sensors: presence in the room, window openings, and ambient temperature.
   </Step>
   <Step title="The system evaluates occupancy and window status">
-    If no presence is detected for the configured time (default: 5 minutes), the system activates ECO mode. If an open window is detected, climate control is automatically turned off.
+    The system applies the selected mode. In ECO, if no presence is detected for the configured time (default: 5 minutes), it turns HVAC off; in COMFORT, it maintains the setpoint even when no presence is detected. If an open window is detected, HVAC turns off according to the configured window timer.
   </Step>
   <Step title="Automations adjust HVAC and lighting">
     The Voltic FrostLine regulates the fan coil according to the setpoint of the active mode (ECO or COMFORT). The Voltic Switch cuts or restores power to lighting and TV subcircuits.
@@ -35,15 +35,15 @@ Voltic Smart Room Control is a BMS (Building Management System) designed specifi
 
 ## Zigbee network
 
-All sensors and actuators communicate with the VolticHub using the Zigbee protocol (2.4 GHz band). The hub acts as the network coordinator. To avoid interference, it is important to keep the hotel Wi-Fi channel 11 free.
+All sensors and actuators communicate with the VolticHub using the Zigbee protocol (2.4 GHz band). The Hub uses **Zigbee channel 25** by default, which can overlap with **Wi-Fi channel 11**. Configure the hotel's access points to avoid channel 11 and reduce collisions and interference.
 
 <Note>
-  Each VolticHub covers one floor of the hotel. If there are multiple floors, install one hub per floor with its corresponding Ethernet connection.
+  The official topology is one VolticHub per floor. As a reference, each Hub can manage approximately 150 devices and should be assigned 10–15 rooms on that floor. Rooms must be on the same floor; add repeaters and, only when the coverage survey requires it, an additional Hub.
 </Note>
 
 ## Energy savings
 
-Hotels that operate the Voltic system correctly can achieve **energy savings of up to 30% in guest rooms**, thanks to presence-based automation and proper temperature configuration.
+Hotels that operate the Voltic system correctly can achieve **energy savings of up to 30% in guest rooms**, thanks to presence-based automation and proper temperature configuration. This is an internal Voltic figure; see [voltic.es](https://voltic.es) for more information.
 
 <CardGroup cols={2}>
   <Card title="Installation guide" icon="screwdriver-wrench" href="/en/installation">
@@ -52,5 +52,9 @@ Hotels that operate the Voltic system correctly can achieve **energy savings of 
 
   <Card title="ECO and COMFORT modes" icon="leaf" href="/en/operation/operating-modes">
     Configure operating modes to maximize savings.
+  </Card>
+
+  <Card title="FrostLine in hotels" icon="temperature-half" href="/en/installation/voltic-frostline-hotel">
+    Install and operate the thermostat for hotel topology and processes.
   </Card>
 </CardGroup>

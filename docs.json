@@ -1,4 +1,5 @@
 {
+  "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
   "name": "Voltic",
   "colors": {
@@ -11,7 +12,7 @@
     "dark": "https://cdn.voltic.es/media/logos/logo_cian.svg",
     "href": "https://voltic.one"
   },
-  "favicon": "https://cdn.voltic.es/media/logos/logo_cian.svg",
+  "favicon": "favicon.png",
   "footer": {
     "socials": {
       "x": "https://twitter.com/voltic_es",
@@ -45,55 +46,133 @@
           }
         },
         "pages": [
-          "index",
+          "index"
+        ],
+        "products": [
           {
-            "group": "Primeros pasos",
-            "icon": "rocket",
-            "pages": [
-              "primeros-pasos/index",
-              "primeros-pasos/como-funciona"
+            "product": "Hotel Room Control",
+            "description": "Voltic Freeline: control inteligente de climatización e iluminación para habitaciones de hotel.",
+            "icon": "hotel",
+            "groups": [
+              {
+                "group": "Empezar",
+                "icon": "rocket",
+                "pages": [
+                  "primeros-pasos/index",
+                  "primeros-pasos/como-funciona"
+                ]
+              },
+              {
+                "group": "Instalar",
+                "icon": "screwdriver-wrench",
+                "pages": [
+                  "instalacion/index",
+                  "instalacion/requisitos",
+                  "instalacion/voltichub-repetidores",
+                  "instalacion/voltic-switch",
+                  "instalacion/voltic-frostline-hotel",
+                  "instalacion/sensores-contacto",
+                  "instalacion/sensores-presencia"
+                ]
+              },
+              {
+                "group": "Operar",
+                "icon": "chart-line",
+                "pages": [
+                  "operacion/index",
+                  "operacion/voltic-frostline-hotel",
+                  "operacion/modos-funcionamiento",
+                  "operacion/temperaturas-recomendadas",
+                  "operacion/sensores"
+                ]
+              },
+              {
+                "group": "Referencia",
+                "icon": "book-open",
+                "pages": [
+                  "instalacion/manuales-tecnicos"
+                ]
+              },
+              {
+                "group": "Soporte",
+                "icon": "headset",
+                "pages": [
+                  "soporte/faq",
+                  "soporte/contacto"
+                ]
+              }
             ]
           },
           {
-            "group": "Guías de instalación",
-            "icon": "screwdriver-wrench",
-            "pages": [
-              "instalacion/index",
-              "instalacion/requisitos",
-              "instalacion/voltichub-repetidores",
-              "instalacion/voltic-switch",
-              "instalacion/voltic-frostline",
-              "instalacion/sensores-contacto",
-              "instalacion/sensores-presencia",
-              "instalacion/manuales-tecnicos"
+            "product": "Voltic FrostLine",
+            "description": "Termostato independiente para viviendas, instalaciones de fan coil y sistemas Voltic.",
+            "icon": "temperature-half",
+            "groups": [
+              {
+                "group": "Empezar",
+                "icon": "rocket",
+                "pages": [
+                  "frostline/index"
+                ]
+              },
+              {
+                "group": "Instalar",
+                "icon": "screwdriver-wrench",
+                "pages": [
+                  "instalacion/voltic-frostline",
+                  "frostline/compatibilidad"
+                ]
+              },
+              {
+                "group": "Operar",
+                "icon": "chart-line",
+                "pages": [
+                  "frostline/funcionamiento"
+                ]
+              },
+              {
+                "group": "Soporte",
+                "icon": "headset",
+                "pages": [
+                  "soporte/contacto"
+                ]
+              }
             ]
           },
           {
-            "group": "Cooling Patrol",
+            "product": "Cooling Patrol",
+            "description": "Monitorización inalámbrica de temperatura para cámaras frigoríficas.",
             "icon": "snowflake",
-            "pages": [
-              "cooling-patrol/index",
-              "cooling-patrol/inventario-capturas",
-              "cooling-patrol/instalacion",
-              "cooling-patrol/operacion"
-            ]
-          },
-          {
-            "group": "Operación y buenas prácticas",
-            "icon": "chart-line",
-            "pages": [
-              "operacion/index",
-              "operacion/modos-funcionamiento",
-              "operacion/temperaturas-recomendadas",
-              "operacion/sensores"
-            ]
-          },
-          {
-            "group": "Soporte",
-            "icon": "headset",
-            "pages": [
-              "soporte/faq",
-              "soporte/contacto"
+            "groups": [
+              {
+                "group": "Empezar",
+                "icon": "rocket",
+                "pages": [
+                  "cooling-patrol/index",
+                  "cooling-patrol/inventario-capturas"
+                ]
+              },
+              {
+                "group": "Instalar",
+                "icon": "screwdriver-wrench",
+                "pages": [
+                  "cooling-patrol/instalacion"
+                ]
+              },
+              {
+                "group": "Operar",
+                "icon": "chart-line",
+                "pages": [
+                  "cooling-patrol/operacion"
+                ]
+              },
+              {
+                "group": "Soporte",
+                "icon": "headset",
+                "pages": [
+                  "soporte/contacto"
+                ]
+              }
             ]
           }
         ]
@@ -118,55 +197,133 @@
           }
         },
         "pages": [
-          "en/index",
+          "en/index"
+        ],
+        "products": [
           {
-            "group": "Getting Started",
-            "icon": "rocket",
-            "pages": [
-              "en/getting-started/index",
-              "en/getting-started/how-it-works"
+            "product": "Hotel Room Control",
+            "description": "Voltic Freeline: smart HVAC and lighting control for hotel rooms.",
+            "icon": "hotel",
+            "groups": [
+              {
+                "group": "Get started",
+                "icon": "rocket",
+                "pages": [
+                  "en/getting-started/index",
+                  "en/getting-started/how-it-works"
+                ]
+              },
+              {
+                "group": "Install",
+                "icon": "screwdriver-wrench",
+                "pages": [
+                  "en/installation/index",
+                  "en/installation/requirements",
+                  "en/installation/voltichub-repeaters",
+                  "en/installation/voltic-switch",
+                  "en/installation/voltic-frostline-hotel",
+                  "en/installation/contact-sensors",
+                  "en/installation/presence-sensors"
+                ]
+              },
+              {
+                "group": "Operate",
+                "icon": "chart-line",
+                "pages": [
+                  "en/operation/index",
+                  "en/operation/voltic-frostline-hotel",
+                  "en/operation/operating-modes",
+                  "en/operation/recommended-temperatures",
+                  "en/operation/sensors"
+                ]
+              },
+              {
+                "group": "Reference",
+                "icon": "book-open",
+                "pages": [
+                  "en/installation/technical-manuals"
+                ]
+              },
+              {
+                "group": "Support",
+                "icon": "headset",
+                "pages": [
+                  "en/support/faq",
+                  "en/support/contact"
+                ]
+              }
             ]
           },
           {
-            "group": "Installation Guides",
-            "icon": "screwdriver-wrench",
-            "pages": [
-              "en/installation/index",
-              "en/installation/requirements",
-              "en/installation/voltichub-repeaters",
-              "en/installation/voltic-switch",
-              "en/installation/voltic-frostline",
-              "en/installation/contact-sensors",
-              "en/installation/presence-sensors",
-              "en/installation/technical-manuals"
+            "product": "Voltic FrostLine",
+            "description": "Standalone thermostat for homes, fan coil installations, and Voltic systems.",
+            "icon": "temperature-half",
+            "groups": [
+              {
+                "group": "Get started",
+                "icon": "rocket",
+                "pages": [
+                  "en/frostline/index"
+                ]
+              },
+              {
+                "group": "Install",
+                "icon": "screwdriver-wrench",
+                "pages": [
+                  "en/installation/voltic-frostline",
+                  "en/frostline/compatibility"
+                ]
+              },
+              {
+                "group": "Operate",
+                "icon": "chart-line",
+                "pages": [
+                  "en/frostline/operation"
+                ]
+              },
+              {
+                "group": "Support",
+                "icon": "headset",
+                "pages": [
+                  "en/support/contact"
+                ]
+              }
             ]
           },
           {
-            "group": "Cooling Patrol",
+            "product": "Cooling Patrol",
+            "description": "Wireless temperature monitoring for cold rooms.",
             "icon": "snowflake",
-            "pages": [
-              "en/cooling-patrol/index",
-              "en/cooling-patrol/screenshot-inventory",
-              "en/cooling-patrol/installation",
-              "en/cooling-patrol/operation"
-            ]
-          },
-          {
-            "group": "Operation & Best Practices",
-            "icon": "chart-line",
-            "pages": [
-              "en/operation/index",
-              "en/operation/operating-modes",
-              "en/operation/recommended-temperatures",
-              "en/operation/sensors"
-            ]
-          },
-          {
-            "group": "Support",
-            "icon": "headset",
-            "pages": [
-              "en/support/faq",
-              "en/support/contact"
+            "groups": [
+              {
+                "group": "Get started",
+                "icon": "rocket",
+                "pages": [
+                  "en/cooling-patrol/index",
+                  "en/cooling-patrol/screenshot-inventory"
+                ]
+              },
+              {
+                "group": "Install",
+                "icon": "screwdriver-wrench",
+                "pages": [
+                  "en/cooling-patrol/installation"
+                ]
+              },
+              {
+                "group": "Operate",
+                "icon": "chart-line",
+                "pages": [
+                  "en/cooling-patrol/operation"
+                ]
+              },
+              {
+                "group": "Support",
+                "icon": "headset",
+                "pages": [
+                  "en/support/contact"
+                ]
+              }
             ]
           }
         ]
@@ -195,18 +352,5 @@
   },
   "interaction": {
     "drilldown": true
-  },
-  "navbar": {
-    "links": [
-      {
-        "href": "https://app.voltic.es",
-        "label": "Ir a la app"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Contactar",
-      "href": "https://voltic.odoo.com/book/soporte"
-    }
   }
 }

@@ -1,10 +1,16 @@
 ---
-title: "Install the Voltic FrostLine (Zigbee Thermostat)"
+title: "Install the Voltic FrostLine"
 sidebarTitle: "Voltic FrostLine"
-description: "Install the Voltic FrostLine digital Zigbee thermostat for smart fan coil control in hotel rooms."
+description: "Install the Voltic FrostLine Zigbee thermostat in homes, hotel rooms, and other fan coil installations."
 ---
 
-The Voltic FrostLine is a smart digital Zigbee thermostat for controlling 2-pipe / 2-way fan coils. It enables local and remote control, temperature measurement, time scheduling, and presence-based automation.
+The Voltic FrostLine is a smart digital Zigbee 3.0 thermostat for local and remote fan coil control. It can be used in 2-pipe, 4-pipe, and fan coil plus hydronic underfloor-heating installations, provided the connection diagram and configuration match the device version.
+
+Check the [compatibility matrix](/en/frostline/compatibility) before choosing the wiring diagram.
+
+<Warning>
+  This installation works with 230V and must be performed exclusively by a qualified electrician. Disconnect, lock out, and verify the circuit before touching it, follow local electrical regulations, and do not energize the thermostat during installation.
+</Warning>
 
 ![Voltic Frostline 2 - Install thermostat](https://r2.voltic.es/media/installation-docs-assets/devices/frostline/conectando-termostato.webp)
 
@@ -19,7 +25,7 @@ Install the Voltic FrostLine **inside the room**, following these rules:
 - Do not install in corners, behind furniture, or in places where air circulation is obstructed
 
 <Warning>
-  Disconnect the power supply before mounting the thermostat. Do not touch the internal electronic board during installation.
+  Keep the power supply isolated until all connections are complete. Do not touch the internal electronic board during installation.
 </Warning>
 
 ## Connection and wiring
@@ -27,14 +33,35 @@ Install the Voltic FrostLine **inside the room**, following these rules:
 - **Power supply:** 230V AC / 50 Hz (exclusively via 230V line, no batteries required)
 - **Maximum load:** 3A
 - **Digital outputs:**
-  - Valve: 2-way (also compatible with 3-way valve)
+  - Valve or valves: according to the installation configuration
   - Fan speeds: V1 / V2 / V3
 
 ![Voltic Frostline 2 - Connection diagram (2-pipe)](https://r2.voltic.es/media/installation-docs-assets/devices/frostline/frostline_scheme.webp)
 
+<Note>
+  The diagram shown is for a 2-pipe installation. Do not reuse it as a template for 4-pipe or combined underfloor-heating installations; check the [compatibility guide](/en/frostline/compatibility).
+</Note>
+
 <Warning>
   Connect only 230V valves. Do not connect 12V or 24V valves to the Voltic FrostLine.
 </Warning>
+
+## Hubs and pairing
+
+FrostLine can pair with a **VolticHub** for management in [app.voltic.es](https://app.voltic.es), or with a **Tuya-compatible Zigbee Hub** for use with Tuya Smart / Smart Life. The inclusion process and available features depend on the Hub and its firmware.
+
+<Note>
+  For a standalone installation, choose the Hub and platform before mounting the thermostat. Do not pair the device with a second platform without following the relevant migration or unpairing procedure.
+</Note>
+
+## Standalone installation
+
+If FrostLine is installed in a home or outside a hotel kit:
+
+1. Identify the device version, fan coil diagram, and Hub you will use.
+2. Check [scenario compatibility](/en/frostline/compatibility) and prepare the protections.
+3. Mount and wire the device with the circuit isolated, following the validated diagram.
+4. Pair FrostLine with the VolticHub or Tuya Hub and test each output before closing the installation.
 
 ## Mounting
 
@@ -80,7 +107,7 @@ Install the Voltic FrostLine **inside the room**, following these rules:
     Verify that the thermostat controls the valve and fan speeds according to the active mode.
   </Step>
   <Step title="Sync with the platform">
-    Confirm on [app.voltic.es](https://app.voltic.es) that the device appears synced and reports temperature correctly.
+    Confirm on the selected platform (Voltic or Tuya Smart / Smart Life) that the device is paired and reports temperature correctly.
   </Step>
 </Steps>
 
@@ -88,4 +115,6 @@ Install the Voltic FrostLine **inside the room**, following these rules:
 
 - [Install the Voltic Switch](/en/installation/voltic-switch)
 - [ECO and COMFORT modes](/en/operation/operating-modes)
+- [Installation compatibility and scenarios](/en/frostline/compatibility)
+- [Standalone FrostLine operation](/en/frostline/operation)
 - [Technical manuals](/en/installation/technical-manuals)
