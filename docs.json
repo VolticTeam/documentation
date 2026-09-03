@@ -31,6 +31,10 @@
         "navbar": {
           "links": [
             {
+              "href": "/",
+              "label": "Inicio"
+            },
+            {
               "href": "https://app.voltic.es",
               "label": "Ir a la app"
             },
@@ -181,6 +185,10 @@
         "language": "en",
         "navbar": {
           "links": [
+            {
+              "href": "/en",
+              "label": "Home"
+            },
             {
               "href": "https://app.voltic.es",
               "label": "Go to app"
