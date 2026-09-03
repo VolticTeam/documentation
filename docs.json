@@ -27,14 +27,8 @@
       {
         "language": "es",
         "default": true,
-        "groups": [
-          {
-            "group": "Inicio",
-            "icon": "house",
-            "pages": [
-              "index"
-            ]
-          },
+        "pages": [
+          "index",
           {
             "group": "Primeros pasos",
             "icon": "rocket",
@@ -87,14 +81,8 @@
       },
       {
         "language": "en",
-        "groups": [
-          {
-            "group": "Home",
-            "icon": "house",
-            "pages": [
-              "en/index"
-            ]
-          },
+        "pages": [
+          "en/index",
           {
             "group": "Getting Started",
             "icon": "rocket",
