@@ -1,0 +1,247 @@
+---
+title: "Cooling Patrol: operación, alertas e historial"
+sidebarTitle: "Operación"
+description: "Configura alertas y umbrales, opera Cooling Patrol cada día, consulta el historial y documenta las desviaciones APPCC."
+---
+
+Esta guía explica el trabajo diario con Cooling Patrol después de la instalación: configurar los rangos de cada cámara, revisar el estado, responder ante una desviación y conservar la evidencia cuando el procedimiento del establecimiento lo requiera.
+
+<Note>
+  Los textos y rutas de esta guía siguen la interfaz actual de [app.voltic.es](https://app.voltic.es). La versión, el rol y la configuración del edificio pueden cambiar lo que aparece. El [inventario de pantallas y capturas](/cooling-patrol/inventario-capturas) identifica las capturas pendientes y los datos que deben confirmarse antes de publicar valores definitivos.
+</Note>
+
+## Pantallas que intervienen
+
+| Pantalla en la app | Para qué sirve |
+| --- | --- |
+| **Cooling Patrol > Resumen** | Estado de las cámaras, sensores online/offline, alertas activas, temperatura media, cumplimiento, tendencia y últimas alertas. |
+| **Detalle del sensor** | Lectura actual, rango permitido, estado, batería, última actualización, historial y datos de comunicación. |
+| **Alertas CoolingPatrol** | Configuración individual o masiva de los rangos y de los parámetros avanzados de alerta. |
+| **APPCC > Registro** | Expedientes de desviaciones, filtros por estado y fecha, búsqueda y exportación de la tabla. |
+| **APPCC > Informes** | Informe diario, semanal o mensual, gráficas por sensor y descarga en PDF. |
+| **Detalle del expediente APPCC** | Datos de la desviación, causa, medida correctiva, producto afectado y revisión final. |
+
+## Configurar alertas y umbrales
+
+### Configuración por sensor
+
+<Steps>
+  <Step title="Abrir la configuración">
+    En la vista del edificio, abre la pestaña **Alertas CoolingPatrol**. Comprueba que cada sensor tiene el nombre y la ubicación correctos antes de editarlo.
+  </Step>
+  <Step title="Definir el rango">
+    Activa **Alerta activada** y define **Mínimo** y **Máximo**. El rango debe proceder del plan de conservación del producto y del procedimiento del establecimiento, no de una recomendación genérica.
+  </Step>
+  <Step title="Revisar la configuración avanzada">
+    Si está disponible, abre **Configuración avanzada de la alerta**:
+
+    - **Histéresis:** margen que el sistema aplica alrededor del límite; confirma con el equipo técnico cómo afecta a los avisos.
+    - **Espera entre avisos:** tiempo mínimo entre avisos consecutivos.
+    - **Duración antes de incidencia:** tiempo que la lectura debe permanecer fuera de rango antes de crear una desviación.
+  </Step>
+  <Step title="Guardar y comprobar">
+    Guarda la configuración y vuelve a **Cooling Patrol > Resumen**. Comprueba que el rango se muestra junto al sensor y que el estado no aparece como **No configurado**. Documenta quién aprobó el rango y cuándo se cambió.
+  </Step>
+</Steps>
+
+<Warning>
+  La interfaz actual permite editar estas alertas a administradores e instaladores; otros roles pueden verlas en modo lectura. Confirma la matriz de permisos del edificio antes de usar este comportamiento como control operativo.
+</Warning>
+
+### Aplicar una configuración a varios sensores
+
+En **Alertas CoolingPatrol**, selecciona los sensores y usa la configuración masiva. La app avisa de que se aplicará la configuración completa a todos los sensores seleccionados y sustituirá la que tuvieran. Revisa las ubicaciones antes de confirmar: una cámara de conservación y una cámara de congelación normalmente no comparten el mismo rango.
+
+<Note>
+  No publiques valores predeterminados, límites numéricos máximos, canales de notificación ni reglas de escalado hasta confirmarlos con el equipo técnico. La pantalla muestra los campos, pero el valor correcto depende del producto y del contrato de servicio.
+</Note>
+
+## Operación diaria
+
+### Al inicio del turno
+
+1. Abre **Cooling Patrol > Resumen** y selecciona el periodo que corresponda.
+2. Comprueba el indicador general, el número de cámaras **Online** y **Offline**, y las **Alertas activas**.
+3. Revisa primero las cámaras **Críticas**, después las **Advertencias**, **Rozando el límite** y **Sin datos**.
+4. Abre el detalle de cualquier sensor con una lectura antigua, batería baja o ubicación incorrecta.
+5. Si el Hub Cooling Patrol aparece sin conexión, inicia el procedimiento de pérdida de conectividad antes de dar por bueno el resumen.
+
+### Durante el turno
+
+- Comprueba las alertas nuevas y asigna una persona responsable de cada una.
+- No cierres una alerta solo porque la lectura vuelva momentáneamente al rango: verifica la causa y deja constancia.
+- Evita abrir la cámara más tiempo del necesario y no muevas el sensor durante una investigación.
+- Si el sensor no tiene datos, realiza una medición manual y registra la hora, el instrumento y el resultado.
+
+### Al cierre del turno
+
+- Confirma que no quedan alertas sin responsable ni expedientes APPCC sin documentar.
+- Exporta el periodo si forma parte del procedimiento del establecimiento.
+- Anota cambios de umbral, sustituciones de batería, incidencias de red y acciones correctivas en el registro de mantenimiento.
+
+### Estados que muestra la app
+
+| Estado | Interpretación operativa |
+| --- | --- |
+| **En rango** | La última lectura disponible está dentro del rango configurado. |
+| **Rozando el límite** | La lectura está cerca de uno de los límites; vigila la tendencia. |
+| **Fuera de rango** | La lectura supera el máximo o baja del mínimo configurado. |
+| **Sin datos** | No hay una lectura reciente utilizable; no equivale a una lectura segura. |
+| **Alerta apagada** | El sensor no tiene la alerta activa. |
+| **No configurado** | Falta un rango completo para evaluar la lectura. |
+
+## Historial, tendencias y exportación
+
+### Consultar el historial de un sensor
+
+Desde **Cooling Patrol > Resumen**, selecciona una cámara y abre el **Detalle del sensor**. La pantalla muestra la lectura actual, el rango permitido, el estado, el porcentaje y voltaje de batería, la última actualización y un gráfico de **Historial de temperatura**.
+
+En la interfaz observada, el gráfico del sensor representa las últimas 24 horas con promedios de 15 minutos y marca los límites configurados. Confirma este intervalo antes de convertirlo en un requisito de control o de auditoría.
+
+### Consultar un periodo
+
+En **Resumen** puedes cambiar entre **Diario**, **Semanal** y **Mensual**, y ajustar las fechas **Desde** y **Hasta**. El panel calcula, cuando hay datos suficientes:
+
+- temperatura media del periodo;
+- cumplimiento, es decir, tiempo dentro de rango;
+- número de cámaras online/offline;
+- alertas activas y su desglose entre críticas y advertencias;
+- tendencia media y últimas alertas.
+
+### Registro e informes APPCC
+
+En **APPCC** encontrarás tres pestañas:
+
+- **Registro:** filtra por **Todas**, **Abiertas**, **Resueltas** o **Revisadas**, por fecha y por sensor o ubicación. La tabla muestra inicio, excursión, duración y estado.
+- **Alertas:** revisa el rango y el estado de cada sensor y abre su configuración avanzada.
+- **Informes:** selecciona un periodo **Diario**, **Semanal** o **Mensual**, elige la fecha y activa **Incluir gráficas por sensor** si las necesitas.
+
+El botón **Descargar PDF** genera el informe de autocontrol. El informe incluye el establecimiento, periodo y zona horaria, sensores, desviaciones, cobertura, sensores fuera de rango, lecturas mínima/media/máxima y las desviaciones del periodo. El registro también ofrece exportación de tabla a **CSV** o **XLS** cuando aparecen las opciones de exportación.
+
+<Tip>
+  Conserva junto al archivo exportado el periodo, la zona horaria del edificio, la versión del procedimiento y la persona que lo descargó. Una exportación es una instantánea y no sustituye al registro de acciones correctivas.
+</Tip>
+
+## Pérdida de conectividad
+
+### Si el Hub Cooling Patrol está offline
+
+La app muestra un aviso indicando que el gateway/Hub no responde y que lo visible es la última lectura recibida. Sigue este orden:
+
+1. Comprueba la alimentación USB-C y que el Hub no se haya desplazado o desconectado.
+2. Comprueba el cable Ethernet y el puerto de red; si usa Wi‑Fi, verifica que la red y la contraseña sigan disponibles.
+3. Comprueba si otros dispositivos del mismo edificio tienen conexión.
+4. No interpretes las lecturas antiguas como actuales. Toma mediciones manuales de las cámaras afectadas.
+5. Cuando vuelva la conexión, espera a que se actualice la **Última actualización** y confirma que cada sensor recupera el estado **Online**.
+6. Si no se recupera, guarda la hora de inicio y fin, el número de serie del Hub, las mediciones manuales y contacta con [soporte](/soporte/contacto).
+
+### Si solo un sensor aparece sin datos
+
+- Abre su detalle y comprueba **Última actualización**, batería y datos de señal.
+- Revisa que el sensor siga en la ubicación etiquetada y que no se haya cubierto, mojado o golpeado.
+- Comprueba la batería siguiendo el manual del modelo; no intercambies pilas ni abras la envolvente si el procedimiento no lo autoriza.
+- Si el resto de sensores funciona, no cambies los umbrales para ocultar el problema.
+
+<Warning>
+  El tiempo exacto que la app usa para pasar a **Sin datos**, la cadencia de lectura y el comportamiento durante una reconexión requieren confirmación técnica. Mientras tanto, aplica el procedimiento manual del establecimiento.
+</Warning>
+
+## Baterías y mantenimiento
+
+El detalle del sensor muestra el **porcentaje de batería** y, cuando el dispositivo lo envía, el **voltaje de batería**. Usa ambos datos para planificar el mantenimiento, pero no conviertas un porcentaje en una fecha de sustitución sin la tabla del fabricante.
+
+### Rutina recomendada
+
+- Revisa semanalmente el porcentaje, el voltaje y la fecha de última actualización.
+- Inspecciona la envolvente, tornillos, prensaestopas y sellos sin retirar protecciones innecesariamente.
+- Limpia el exterior con un paño seco y no pulverices líquidos sobre el sensor.
+- Comprueba que no haya condensación, hielo, corrosión ni golpes.
+- Registra fecha, sensor, ubicación, lectura antes/después, batería retirada, batería instalada y responsable.
+- Tras cualquier intervención, confirma en la app una lectura estable y el estado de alerta correcto.
+
+<Note>
+  El tipo, capacidad, autonomía, polaridad, procedimiento de sustitución y grado de protección del sensor no aparecen definidos en esta documentación. Deben salir del manual técnico del modelo instalado.
+</Note>
+
+## Calibración y colocación
+
+### Colocar el sensor
+
+Instala el sensor en un punto representativo del producto almacenado y deja espacio para que el aire circule. Evita:
+
+- el chorro directo del evaporador o del ventilador;
+- la proximidad inmediata a la puerta, juntas o entradas de aire caliente;
+- el contacto directo con paredes, techo, suelo, bandejas o producto;
+- zonas donde pueda recibir golpes, agua, hielo o quedar tapado;
+- cambiar de cámara sin actualizar el nombre y la ubicación en la app.
+
+Usa la fijación y la orientación indicadas en el manual del modelo. Tras instalarlo, espera a que la lectura se estabilice antes de compararla con el rango.
+
+### Verificar una lectura
+
+1. Usa un termómetro de referencia identificado y con calibración vigente.
+2. Colócalo junto al punto de medición sin bloquear el sensor.
+3. Compara varias lecturas estables y anota fecha, hora, instrumentos, temperatura, diferencia y responsable.
+4. Si la diferencia supera la tolerancia del procedimiento, conserva el registro, etiqueta el sensor como pendiente de revisión y contacta con soporte.
+5. No introduzcas un desplazamiento manual en la app salvo que el equipo técnico confirme que el modelo y la versión lo permiten.
+
+<Warning>
+  No se ha encontrado un control de offset o calibración en la interfaz actual. La tolerancia, el intervalo de calibración, el punto de referencia y la posibilidad de corregir la lectura requieren confirmación técnica.
+</Warning>
+
+## Diagnóstico de sensores
+
+| Síntoma | Comprobaciones seguras | Siguiente acción |
+| --- | --- | --- |
+| No hay lectura | Última actualización, estado del Hub, batería y señal. | Medición manual; si el Hub está online y el sensor sigue sin datos, abrir incidencia. |
+| Fuera de rango | Verificar con termómetro de referencia, puerta, evaporador y equipo de frío. | Proteger el producto y seguir el procedimiento de alerta crítica. |
+| Lectura inestable | Ubicación, contacto con superficies, hielo/condensación y golpes. | No moverlo durante la comprobación; documentar y pedir revisión si persiste. |
+| Batería baja | Porcentaje, voltaje y fecha de la última sustitución. | Sustituir solo con el procedimiento y la batería aprobados. |
+| Humedad o datos secundarios ausentes | Si el modelo transmite ese dato, revisar última actualización y comunicación. | No rellenar el dato manualmente; confirmar compatibilidad con soporte. |
+| Sensor en la cámara equivocada | Nombre, ubicación, número de serie y etiqueta física. | Corregir la asignación siguiendo el procedimiento de alta y dejar trazabilidad del cambio. |
+
+## Procedimiento ante alertas críticas
+
+<Steps>
+  <Step title="Confirmar la alerta sin retrasar la respuesta">
+    Abre el sensor y anota lectura, límite, hora y duración mostrados. Si aparece **Sin datos** u **Offline**, trátalo como pérdida de monitorización y toma una medición manual.
+  </Step>
+  <Step title="Proteger el producto y verificar">
+    Mantén la puerta cerrada, limita las aperturas y comprueba la cámara con un instrumento de referencia. Sigue el plan APPCC y las instrucciones del responsable de seguridad alimentaria para inmovilizar, trasladar o liberar producto.
+  </Step>
+  <Step title="Buscar la causa y escalar">
+    Comprueba alimentación del equipo de frío, puerta y juntas, evaporador, condensación, carga y conectividad. Avisa al responsable del turno y a mantenimiento. No cambies el umbral para hacer desaparecer la alerta.
+  </Step>
+  <Step title="Documentar la desviación">
+    En **APPCC > Registro**, abre el expediente y completa como mínimo **Causa**, **Medida correctiva** y, cuando aplique, **Producto afectado**, **Lote**, **Cantidad**, **Destino del producto** y **Responsable**. Usa **Guardar sin resolver** si la investigación continúa.
+  </Step>
+  <Step title="Resolver y revisar">
+    Resuelve solo cuando la cámara haya recuperado el rango y la acción correctiva esté comprobada. Un revisor autorizado puede usar **Revisar y bloquear**; un expediente revisado queda bloqueado para cambios posteriores.
+  </Step>
+</Steps>
+
+<Warning>
+  La etiqueta **Crítica** y las reglas que la distinguen de **Advertencia** deben confirmarse con el equipo técnico y el plan APPCC del establecimiento. La aplicación no sustituye la decisión de seguridad alimentaria.
+</Warning>
+
+## Conservación y trazabilidad cuando aplique
+
+Si el establecimiento está sujeto a un procedimiento APPCC o equivalente, conserva como mínimo la evidencia que exija ese procedimiento:
+
+- exportación PDF del informe y, si se usa, CSV/XLS del registro;
+- periodo cubierto y zona horaria del edificio;
+- sensor, ubicación, número de serie y rango vigente;
+- inicio, recuperación, duración, límite, temperatura inicial, pico y final de cada desviación;
+- causa, medida correctiva, producto/lote/cantidad, destino y responsable;
+- mediciones manuales y comprobaciones de calibración;
+- cambios de batería, mantenimiento y pérdida de conectividad;
+- quién resolvió y quién revisó/bloqueó el expediente.
+
+La app distingue expedientes **Abiertos**, **Resueltos** y **Revisados**. Antes de usar el sistema como registro oficial, confirma el periodo de conservación, la firma o bloqueo requerido, el formato aceptado, la autoridad responsable y el plan de copias de seguridad. Esos requisitos dependen de la jurisdicción, del producto y del procedimiento del establecimiento.
+
+## Artículos relacionados
+
+- [Guía de instalación de Cooling Patrol](/cooling-patrol/instalacion)
+- [Inventario de pantallas y capturas](/cooling-patrol/inventario-capturas)
+- [Preguntas frecuentes](/soporte/faq)
+- [Contactar con soporte](/soporte/contacto)

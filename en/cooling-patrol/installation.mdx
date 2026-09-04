@@ -1,0 +1,104 @@
+---
+title: "Cooling Patrol: Step-by-Step Installation Guide"
+sidebarTitle: "Installation"
+description: "Install Cooling Patrol: connect the Hub, create your account at app.voltic.es, add sensors with QR code, and verify temperature readings."
+---
+
+This guide walks you through the complete installation of Cooling Patrol: from connecting the Hub to verifying that all sensors report temperature correctly on the Voltic platform.
+
+## Pre-Installation Checklist
+
+Before you begin, confirm you have all components:
+
+**Hardware:**
+
+- Cooling Patrol Hub
+- Cooling Patrol Sensors (one per cold room)
+
+**Tools:**
+
+- Double-sided tape
+- Drill and screws
+- Screwdriver
+- Calibrated reference thermometer (for verification)
+- Labels or a location and serial-number log
+
+## Installation
+
+<Steps>
+  <Step title="Site Assessment">
+    Choose a suitable location for the Hub before installing it:
+
+    - **Dry and ventilated** place, away from heat and moisture sources
+    - Close to the spaces where sensors will be installed
+    - With enough space around the Hub
+    - With access to **USB-C power** and, if possible, **Ethernet (RJ-45)**
+
+    Identify the cold rooms or other spaces where the sensors will be installed. Before fixing each sensor, define a representative point away from direct evaporator airflow, the door, and surfaces that could have a different temperature from the stored product.
+  </Step>
+  <Step title="Hub Connection">
+    Connect the Hub in this order:
+
+    1. Connect the Hub to **Ethernet**. If you do not have Ethernet, skip directly to step 2.
+    2. Connect the Hub to **USB-C power**.
+    3. If you are not using Ethernet, access the Wi-Fi settings on your phone, tablet, or PC.
+
+    ![UI WiFi connect](https://cdn.voltic.es/media/cooling-patrol/product/ui_wifi_connect.webp)
+
+    4. Select your **Hub's network** (named `gateway+gateway_serial_number`).
+    5. Add it to your Wi-Fi network by selecting it from the list and entering the password.
+    6. Wait **1-2 minutes** for the system to start correctly.
+  </Step>
+  <Step title="Log In to Voltic">
+    1. Go to [app.voltic.es](https://app.voltic.es) and create an account.
+    2. Select **Cooling Patrol** as the building type.
+    3. Follow the form and fill in all requested data.
+  </Step>
+  <Step title="Add Devices">
+    1. In your building's dashboard, select the **Add devices** button.
+    2. Scan the **small QR code** on the Hub (the small white label with the Voltic logo).
+    3. Check that the serial number matches the one on the label.
+    4. Add each sensor in the same way:
+       - Scan the sensor's small QR code
+       - Check that the serial number matches
+       - Configure the sensor on the platform (follow the form)
+       - Install it in the corresponding location (inside the cold room)
+    5. Repeat this process for each sensor.
+  </Step>
+  <Step title="Place and document each sensor">
+    Fix the sensor using the method in the model manual. Do not cover it or rest it against a wall, ceiling, floor, tray, or product. Avoid impact, water, ice, condensation, and direct evaporator airflow.
+
+    Record the sensor name, room, serial number, installation date, and a clear position reference. If you move the sensor to another room, update its location in the platform first.
+  </Step>
+  <Step title="Verify the initial reading">
+    Once the reading has stabilized, compare it with a reference thermometer beside the measurement point. Record the difference, time, and instrument used. Do not enter an offset in the app unless the technical team confirms that the model supports it.
+  </Step>
+  <Step title="System Verification">
+    Once you have installed all devices, check in the app that they are reporting the correct information. The sensor temperature should drop until it approaches the interior temperature of the space where it is installed, and its state should no longer be **No data** or **Not configured**.
+
+    <Tip>
+      It may take a few minutes to start reporting information. Please be patient.
+    </Tip>
+
+    If after adding the sensor to the platform, configuring it, and installing it inside the cold room it does not report information after **30-60 minutes**, contact support.
+  </Step>
+</Steps>
+
+<Warning>
+  Battery type, protection rating, calibration tolerance, stabilization interval, and exact placement distances depend on the installed model. Confirm them in the technical manual before making them site requirements.
+</Warning>
+
+## After installation
+
+- Configure ranges in [Operation, alerts, and history](/en/cooling-patrol/operation).
+- Complete battery and maintenance checks according to the sensor manual.
+- Keep evidence of onboarding, location, initial reading, and responsible person.
+- See the [screenshot inventory](/en/cooling-patrol/screenshot-inventory) when you need to illustrate the procedure.
+
+## Cooling Patrol Support
+
+If you encounter a problem that this guide does not resolve, contact the support team:
+
+- **Phone:** +34 871 02 37 69
+- **Email:** [soporte@voltic.es](mailto:soporte@voltic.es)
+- **Book an appointment:** [erp.voltic.es/book/soporte](https://erp.voltic.es/book/soporte)

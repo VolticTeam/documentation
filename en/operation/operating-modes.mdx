@@ -1,0 +1,101 @@
+---
+title: "Operating Modes: ECO and COMFORT"
+sidebarTitle: "ECO and COMFORT"
+description: "Learn how to configure and use the ECO and COMFORT modes of the Voltic system to optimize energy savings and guest comfort in your hotel."
+---
+
+The Voltic Smart Room Control system has two operating modes that automatically adjust HVAC behavior based on room occupancy: ECO mode and COMFORT mode.
+
+In each room, **Voltic FrostLine** applies the setpoint and controls the fan coil valve or valves and fan speeds according to the approved diagram. See the [FrostLine hotel operation guide](/en/operation/voltic-frostline-hotel) for room-level monitoring and maintenance.
+
+<Note>
+  Proper system operation depends on: proper system installation, correct initial configuration, and appropriate operational use by the hotel. Energy savings values are estimates based on standard operating conditions and may vary depending on building type, room orientation, weather conditions, guest usage habits, and hotel operational configuration.
+</Note>
+
+## Common condition for both modes
+
+<Warning>
+  Both ECO mode and COMFORT mode require the **window to remain closed** for the thermostat to operate. If an open window is detected, the HVAC system turns off automatically according to the time configured in the Control Panel, under Automations, in Automation Times, in the Window section.
+</Warning>
+
+![Automation times configuration — Window](https://r2.voltic.es/media/guia-buenas-practicas/control-panel/control-panel-window.webp)
+
+## State table
+
+The table below summarizes the result of the selected mode and the room signals. Presence and window timers are configured in the Control Panel.
+
+| Selected mode | Window | Presence | Result |
+| --- | --- | --- | --- |
+| ECO | Closed | Detected | HVAC operates according to the ECO setpoint. |
+| ECO | Closed | Not detected for the timer | HVAC turns off when the presence timer ends (5 minutes by default). |
+| COMFORT | Closed | Detected or not detected | HVAC maintains the configured comfort setpoint. |
+| ECO or COMFORT | Open for the configured timer | Any | HVAC turns off when the window timer ends. |
+
+## ECO Mode
+
+ECO mode prioritizes **energy efficiency**, reducing HVAC operation when the room is unoccupied. It is the **recommended mode for standard hotel operation**.
+
+### How it works
+
+The system detects guest absence using sensors. If ECO is selected and no presence is detected for **5 minutes**, the air conditioning turns off automatically. This interval can be modified from the Control Panel, under Automations, in Automation Times, in the Presence section.
+
+![Automation times configuration — Presence](https://r2.voltic.es/media/guia-buenas-practicas/control-panel/control-panel-pir.webp)
+
+<Note>
+  Unlike COMFORT mode, ECO mode does not maintain a setpoint temperature when the room is empty. The HVAC system turns off completely.
+</Note>
+
+### Configuration
+
+**Centralized configuration** (for multiple rooms from the Control Panel):
+
+![ECO mode activation — centralized configuration](https://r2.voltic.es/media/guia-buenas-practicas/control-panel/control-panel-eco.webp)
+
+**Individual configuration** (from the intelligence panel of each room):
+
+![ECO mode activation — individual configuration](https://r2.voltic.es/media/guia-buenas-practicas/room/room-eco-mode.webp)
+
+### Benefits
+
+- Reduces energy consumption in unoccupied rooms
+- Automates HVAC shutdown based on occupancy
+- Improves overall hotel energy efficiency
+
+---
+
+## COMFORT Mode
+
+COMFORT mode prioritizes **guest thermal wellbeing**, keeping the room within a comfortable temperature range even when no presence is detected.
+
+### How it works
+
+When the guest leaves the room, the HVAC remains active as long as the window is closed. The system maintains a **predefined comfort temperature of 24°C**.
+
+### Configuration
+
+**Group configuration** (from the Control Panel, under Automations, in Comfort Temperature):
+
+![COMFORT mode configuration — group configuration](https://r2.voltic.es/media/guia-buenas-practicas/control-panel/control-panel-confort.webp)
+
+**Individual configuration** (from the intelligence panel of each room):
+
+![COMFORT mode configuration — individual configuration](https://r2.voltic.es/media/guia-buenas-practicas/room/room-confort-mode.webp)
+
+### Recommended temperature ranges
+
+| Mode | Recommended temperature |
+| --- | --- |
+| Heating | 21°C - 23°C |
+| Cooling | 24°C - 26°C |
+
+### When to use it
+
+Recommended for rooms with high sun exposure, during periods of high outdoor temperatures, or when you want to avoid the "heat blast" effect: the guest returns to an excessively hot room.
+
+---
+
+## Related articles
+
+- [Recommended temperatures](/en/operation/recommended-temperatures)
+- [How sensors work](/en/operation/sensors)
+- [Operate FrostLine in a hotel](/en/operation/voltic-frostline-hotel)

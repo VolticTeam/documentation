@@ -1,0 +1,57 @@
+---
+title: "Frequently Asked Questions About the Voltic System"
+sidebarTitle: "FAQ"
+description: "Answers to the most frequently asked questions about installing, configuring, and operating Voltic Smart Room Control and Voltic FrostLine."
+---
+
+Find here the answers to the most common questions about Voltic Smart Room Control and Voltic FrostLine. If you cannot find what you are looking for, [contact our technical support](/en/support/contact).
+
+<AccordionGroup>
+  <Accordion title="What does a Voltic kit for a room include?">
+    The room kit includes a Voltic FrostLine (thermostat), a Voltic Switch (contactor), PIR presence sensors for the bedroom and bathroom, and contact sensors for the window and door. The VolticHub is shared floor infrastructure, not one Hub per room: as a reference, each Hub can manage approximately 150 devices and should be assigned 10–15 rooms on that same floor. Each room kit is preconfigured for a specific room and cannot be interchanged.
+  </Accordion>
+
+  <Accordion title="Can I swap kits between rooms?">
+    No. Each kit is preconfigured for a specific room. Before installing any device, always verify the label with the room number on the box. Installing a kit in the wrong room will cause configuration issues on the platform.
+  </Accordion>
+
+  <Accordion title="Does the VolticHub need Ethernet?">
+    Ethernet is preferable as it provides greater stability. If Ethernet is not available in the installation area, the Hub can also connect via Wi-Fi. See the [VolticHub installation guide](/en/installation/voltichub-repeaters) for Wi-Fi connection steps.
+  </Accordion>
+
+  <Accordion title="Why should I keep Wi-Fi channel 11 free?">
+    The Hub uses Zigbee channel 25 by default, which can overlap with Wi-Fi channel 11. Configure the hotel's access points to avoid channel 11 and reduce collisions and interference that could affect Zigbee network stability.
+  </Accordion>
+
+  <Accordion title="Which fan coil models is the Voltic FrostLine compatible with?">
+    The Voltic FrostLine can be used with 2-pipe fan coils, 4-pipe fan coils, and fan coil plus hydronic underfloor-heating installations, as well as 3-way valves where the diagram supports them. The thermostat power supply is exclusively 230V AC: do not connect 12V or 24V valves. Exact wiring depends on the device version and project; check the [compatibility matrix](/en/frostline/compatibility) before wiring.
+  </Accordion>
+
+  <Accordion title="Can I use FrostLine outside a hotel?">
+    Yes. FrostLine is also sold as a standalone thermostat for homes and can pair with a VolticHub or a Tuya-compatible Zigbee Hub through Tuya Smart / Smart Life. See the [standalone operation guide](/en/frostline/operation) and the pairing procedure for the selected Hub.
+  </Accordion>
+
+  <Accordion title="What does ECO mode do?">
+    ECO mode automatically turns off the HVAC when no presence is detected in the room for the configured time (default, 5 minutes). It is the recommended mode for standard hotel operation. See the page about [ECO and COMFORT modes](/en/operation/operating-modes) for more details.
+  </Accordion>
+
+  <Accordion title="What does COMFORT mode do?">
+    COMFORT mode keeps the room at a predefined comfort temperature (24°C by default) even if no one is present, as long as the window is closed. It is recommended for rooms with high sun exposure or when you want to avoid the "heat blast" effect when the guest returns.
+  </Accordion>
+
+  <Accordion title="Why is the sensor not reporting temperature?">
+    It may take a few minutes to start reporting after installation. If after 30-60 minutes no information appears on the platform, verify the status and polarity of the batteries, the distance to the hub, and that the device is properly joined to the Zigbee network.
+  </Accordion>
+
+  <Accordion title="How much can I save with Voltic?">
+    Hotels that operate the Voltic system correctly can achieve energy savings of up to 30% in rooms. This is an internal Voltic figure; see [voltic.es](https://voltic.es) for more information. Actual results may vary depending on building type, room orientation, weather conditions, and guest usage habits.
+  </Accordion>
+
+  <Accordion title="How do I mount contact sensors durably?">
+    Apply a thin layer of Sikaflex-118 Extreme Grab over the included 3M adhesive. Press the sensor firmly against the surface for at least 10 seconds. You can also secure them with screws if the surface allows. See the [contact sensor guide](/en/installation/contact-sensors) for more details.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Cannot find the answer?" icon="headset" href="/en/support/contact">
+  Contact our technical support team by email, phone, or by booking an appointment.
+</Card>

@@ -1,0 +1,70 @@
+---
+title: "Voltic Installation Prerequisites"
+sidebarTitle: "Requirements"
+description: "Verify electrical, network, documentation, and kit requirements before installing Voltic devices in the hotel."
+---
+
+Before starting any installation, make sure all requirements on this page are met. Proper preparation prevents errors during mounting and ensures connectivity for all devices.
+
+<Warning>
+  Any work on 230V circuits must be performed exclusively by a qualified electrician. Isolate, lock out, and verify the circuit before touching it, follow local electrical regulations, and confirm that the panel protections are suitable.
+</Warning>
+
+## Prior documentation
+
+<Note>
+  Make sure you have the following documents validated before starting:
+</Note>
+
+- Updated floor plans with hub and repeater locations (if applicable)
+- Voltic installation scheme
+- Room numbering matching the Voltic kit
+
+## Electrical requirements
+
+Defined 230V power points per device:
+
+- **Voltic FrostLine** connects to the 24h line (it cannot be controlled by a key card or contactor)
+- **Voltic Switch** connects in the room's electrical panel
+
+## Network and Zigbee requirements
+
+### Data network
+
+- **RJ45 (male)** network outlet for each Hub
+- **PoE switch** or outlet with 24/7 power for each Hub
+
+### Recommended topology
+
+- Install **one VolticHub per floor**. If a floor is split into independent radio zones, add a Hub or repeaters according to the coverage survey.
+- As a reference, each Hub can manage approximately **150 devices**. For robust radio coverage, assign **10–15 rooms** to each Hub.
+- Rooms assigned to a Hub must be on the **same floor**. Add Zigbee repeaters when distance, partitions, or building materials reduce the signal.
+
+### Wi-Fi and Zigbee coverage
+
+<Warning>
+  The Hub uses **Zigbee channel 25** by default, which can overlap with **Wi-Fi channel 11**. Configure the hotel's access points to avoid channel 11 and reduce collisions and interference that could affect Voltic network stability.
+</Warning>
+
+- 24/7 power for each Zigbee repeater
+
+## Kit verification per room
+
+<Warning>
+  Each kit is **preconfigured for a specific room**. It cannot be swapped with another kit.
+</Warning>
+
+- Each box must have a label with the corresponding **room number**
+- Do not install devices in a room that does not match the kit numbering
+
+![Voltic Freeline Kit (Room Control)](https://r2.voltic.es/media/installation-docs-assets/devices/freeline/verificacion-kit-freeline.webp)
+
+<Note>
+  **Voltic Freeline** identifies the room-control system and its kit; **Voltic FrostLine** is the thermostat. They are different products.
+</Note>
+
+## Next step
+
+Once all requirements are verified, start by installing the VolticHub and Zigbee repeaters:
+
+- [Install the VolticHub and Zigbee repeaters](/en/installation/voltichub-repeaters)

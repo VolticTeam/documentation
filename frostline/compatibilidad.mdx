@@ -1,0 +1,40 @@
+---
+title: "Compatibilidad del Voltic FrostLine"
+sidebarTitle: "Compatibilidad"
+description: "Consulta la compatibilidad del Voltic FrostLine con fan coils de 2 y 4 tubos, suelo radiante y hubs Zigbee."
+---
+
+El Voltic FrostLine puede utilizarse en varios escenarios de climatización. La conexión exacta depende de la versión del equipo, el firmware, los actuadores instalados y la lógica definida para la instalación.
+
+## Matriz de compatibilidad
+
+| Escenario | Compatibilidad | Qué debes validar antes de conectar |
+| --- | --- | --- |
+| Fan coil de **2 tubos** | Sí | Es el esquema estándar de esta documentación: una válvula y tres velocidades de ventilador. |
+| Fan coil de **4 tubos** | Sí, con configuración específica | Válvulas independientes de frío y calor, asignación de salidas y lógica de cambio de modo según el esquema aprobado para tu versión. |
+| Fan coil + **suelo radiante hidráulico** | Sí, con configuración específica | Actuador del suelo, prioridades entre circuitos, sondas y protecciones térmicas. No conectes una carga eléctrica de suelo directamente sin un esquema validado. |
+| VolticHub | Sí | Vinculación desde el ecosistema Voltic y la cuenta correspondiente. |
+| Hub Zigbee compatible con Tuya | Sí | Compatibilidad del modelo de Hub, proceso de inclusión y funciones expuestas por Tuya Smart / Smart Life. |
+
+<Warning>
+  El diagrama de 2 tubos no sirve como plantilla para una instalación de 4 tubos ni para una instalación combinada con suelo radiante. No energices el equipo hasta verificar el esquema de bornes, las cargas y las protecciones con el manual de tu versión.
+</Warning>
+
+## Qué documentación necesitamos para cerrar un proyecto
+
+Antes de aprobar una instalación avanzada, reúne:
+
+- Referencia exacta y firmware del FrostLine
+- Esquema del fan coil y de sus válvulas
+- Tipo de actuador del suelo radiante (si aplica)
+- Tensión y corriente de cada carga
+- Hub elegido: VolticHub o Tuya
+- Secuencia deseada de frío, calor, ventilación y prioridades
+
+Si falta alguno de estos datos, solicita el esquema de conexión a soporte antes de realizar el cableado.
+
+## Siguiente paso
+
+- [Instalar el Voltic FrostLine](/instalacion/voltic-frostline)
+- [Configurar y usar FrostLine](/frostline/funcionamiento)
+- [Contactar con soporte](/soporte/contacto)

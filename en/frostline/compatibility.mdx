@@ -1,0 +1,40 @@
+---
+title: "Voltic FrostLine Compatibility"
+sidebarTitle: "Compatibility"
+description: "Check Voltic FrostLine compatibility with 2-pipe and 4-pipe fan coils, underfloor heating, and Zigbee Hubs."
+---
+
+Voltic FrostLine can be used in several HVAC scenarios. The exact connection depends on the device version, firmware, installed actuators, and the control logic defined for the installation.
+
+## Compatibility matrix
+
+| Scenario | Compatibility | Validate before connecting |
+| --- | --- | --- |
+| **2-pipe** fan coil | Yes | This documentation's standard scheme: one valve and three fan speeds. |
+| **4-pipe** fan coil | Yes, with a specific configuration | Independent heating and cooling valves, output assignment, and changeover logic according to the approved scheme for your version. |
+| Fan coil + **hydronic underfloor heating** | Yes, with a specific configuration | Underfloor actuator, circuit priorities, sensors, and thermal protections. Do not connect an electric floor-heating load directly without a validated diagram. |
+| VolticHub | Yes | Pairing through the Voltic ecosystem and the corresponding account. |
+| Tuya-compatible Zigbee Hub | Yes | Hub model compatibility, inclusion process, and features exposed by Tuya Smart / Smart Life. |
+
+<Warning>
+  The 2-pipe diagram is not a template for a 4-pipe installation or a combined underfloor-heating installation. Do not energize the device until you verify terminal mapping, loads, and protections against the manual for your version.
+</Warning>
+
+## Information required for an advanced project
+
+Before approving an advanced installation, collect:
+
+- Exact FrostLine reference and firmware
+- Fan coil and valve diagram
+- Underfloor-heating actuator type, if applicable
+- Voltage and current for each load
+- Selected Hub: VolticHub or Tuya
+- Desired heating, cooling, fan, and priority sequence
+
+If any of this information is missing, request the connection diagram from support before wiring the device.
+
+## Next step
+
+- [Install the Voltic FrostLine](/en/installation/voltic-frostline)
+- [Configure and use FrostLine](/en/frostline/operation)
+- [Contact support](/en/support/contact)

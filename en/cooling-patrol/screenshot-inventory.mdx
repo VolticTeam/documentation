@@ -1,0 +1,73 @@
+---
+title: "Cooling Patrol: Screen and Screenshot Inventory"
+sidebarTitle: "Screenshot inventory"
+description: "Editorial inventory of Cooling Patrol screens, available captures, and technical details pending confirmation."
+---
+
+This page is the working inventory for illustrating the Cooling Patrol documentation. It links only public resources that have already been checked; pending captures must be taken in a demo building or with anonymized data before publication.
+
+## Inventory
+
+| Screen or resource | App path or entry point | What it should show | Status |
+| --- | --- | --- | --- |
+| Hub Wi-Fi connection | Connection assistant | Selecting the Hub network and joining the site's Wi-Fi. | **Available:** [UI WiFi connect](https://cdn.voltic.es/media/cooling-patrol/product/ui_wifi_connect.webp) |
+| Sensor identification | QR onboarding/label | Cooling Patrol name, QR code, and serial number with customer data removed. | **Capture pending** |
+| Cooling Patrol overview | `Cooling Patrol > Overview` | Room count, Online/Offline, active alerts, average temperature, compliance, trend, and recent alerts. | **Capture pending** |
+| Hub offline and data loss | Overview warning | Gateway/Hub offline warning, last reading received, and **No data** state for affected sensors. | **Capture pending** |
+| One-room status | Overview sensor list | Search, All/Online/Alerts/Offline filters, state, range, battery, and last update. | **Capture pending** |
+| Sensor details | Select a room | Current temperature, allowed range, status, battery, voltage, history, humidity/signal when available, Hub, location, and anonymized serial. | **Capture pending** |
+| CoolingPatrol Alerts: individual | Building view > `CoolingPatrol Alerts` | Enabled state, minimum, maximum, and saving one alert. | **Capture pending** |
+| CoolingPatrol Alerts: advanced | `Advanced alert settings` | Hysteresis, cooldown, and breach duration. | **Capture pending** |
+| CoolingPatrol Alerts: bulk | Select several sensors | Replacing the complete configuration and per-sensor results. | **Capture pending** |
+| HACCP: Register | `HACCP > Register` | Status/date filters, search, start, excursion, duration, status, and table export. | **Capture pending** |
+| HACCP: Alerts | `HACCP > Alerts` | Each alert's state, sensor, location, and configuration entry point. | **Capture pending** |
+| HACCP: Reports | `HACCP > Reports` | Period, date, per-sensor chart option, summary, and `Download PDF` button. | **Capture pending** |
+| Incident details | Open an HACCP record | Start, recovery, limit, peak, cause, corrective action, product/lot, disposition, responsible person, and review/lock. | **Capture pending** |
+| PDF report | `Download PDF` | Self-control document with period, time zone, per-sensor control, and deviations. | **Anonymized sample pending** |
+
+The [front_nb.png sensor image](https://cdn.voltic.es/media/cooling-patrol/product/front_nb.png) is a product resource, not an app screenshot. It can identify the device while interface captures are pending.
+
+## Capture criteria
+
+- Use a demo building and demo sensors; remove customer names, addresses, serial numbers, email addresses, and personal data.
+- Capture the normal state and, where possible, controlled examples of **Out of range**, **No data**, and **Offline** without changing a real installation.
+- Keep the visible time zone, °C units, and exact control labels.
+- Provide WebP or PNG images with the same crop and resolution for Spanish and English.
+- Store the app version, user role, date, and publication permission with each image.
+
+## Technical confirmations before publication
+
+| Detail | Why it needs confirmation |
+| --- | --- |
+| Default values and maximum/minimum ranges for threshold, hysteresis, cooldown, and breach duration | The app shows the fields, but valid ranges and initial values may depend on version and stored product. |
+| Notification channels, recipients, repetition, and escalation | The observed interface configures the alert, but it does not document here how notifications are sent or who receives them. |
+| Reading cadence, timeout before **No data**, and reconnection behavior | This determines when a reading is no longer usable and what must be measured manually. |
+| Hub startup time and the 30–60 minute wait after onboarding | These operational times appear in the installation guide and must be validated for the deployed hardware and firmware. |
+| Sensor/battery type, capacity, life, polarity, replacement, and protection rating | These are not defined in this documentation and must not be inferred from other Voltic sensors. |
+| Placement point, tolerance, interval, and calibration method; offset support | These metrology and installation requirements must come from the model manual and site procedure. |
+| Definition of **Critical** versus **Warning** | The app shows both labels, but the operational criterion must match the HACCP plan. |
+| Retention period, signature/lock, accepted format, backups, and reviewing authority | The app offers states and exports, but official-record validity depends on jurisdiction and the applicable procedure. |
+| Permission matrix for managing alerts, resolving, and reviewing incidents | Visible controls change by role; validate who can perform each action. |
+
+### Values observed in the interface (do not publish yet)
+
+The current app validation shows the following limits and initial values. They are implementation references, not an approved specification:
+
+| Field | Observed | Confirmation pending |
+| --- | --- | --- |
+| Alert enabled | A new form appears enabled. | Onboarding policy for already-installed sensors. |
+| Minimum/maximum threshold | Inputs between −100 and 100 °C; maximum must be greater than minimum. | Product operating range and whether it matches the visual control. |
+| Visual allowed range | The range slider shows −20 to 20 °C. | Resolve the difference with the −100 to 100 °C validation before documenting it. |
+| Hysteresis | 0–50 °C; observed initial value: 0 °C. | Operational meaning and recommended value per installation. |
+| Wait between alerts | 1–10,080 min; observed initial value: 60 min. | Minimum, maximum, and repetition policy. |
+| Duration before incident | 0–1,440 min; observed initial value: 5 min. | Whether 0 is allowed for every model and when the record is created. |
+
+<Warning>
+  Until these points are closed, describe controls as **available in the observed interface**, not as requirements, defaults, or a compliance guarantee.
+</Warning>
+
+## Related links
+
+- [Operation, alerts, and history](/en/cooling-patrol/operation)
+- [Installation guide](/en/cooling-patrol/installation)
+- [Contact support](/en/support/contact)

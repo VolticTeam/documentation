@@ -1,14 +1,14 @@
 ---
 title: "Preguntas frecuentes sobre el sistema Voltic"
 sidebarTitle: "FAQ"
-description: "Respuestas a las preguntas más frecuentes sobre la instalación, configuración y operación del sistema Voltic Smart Room Control."
+description: "Respuestas a las preguntas más frecuentes sobre la instalación, configuración y operación de Voltic Smart Room Control y Voltic FrostLine."
 ---
 
-Encuentra aquí las respuestas a las dudas más comunes sobre el sistema Voltic Smart Room Control. Si no encuentras lo que buscas, [contacta con nuestro soporte técnico](/soporte/contacto).
+Encuentra aquí las respuestas a las dudas más comunes sobre Voltic Smart Room Control y Voltic FrostLine. Si no encuentras lo que buscas, [contacta con nuestro soporte técnico](/soporte/contacto).
 
 <AccordionGroup>
   <Accordion title="¿Qué incluye un kit Voltic para una habitación?">
-    Cada kit está compuesto por un VolticHub (coordinador Zigbee), un Voltic FrostLine (termostato), un Voltic Switch (contactor), sensores PIR de presencia para dormitorio y baño, y sensores de contacto para ventana y puerta. Cada kit está preconfigurado para una habitación concreta y no puede intercambiarse.
+    El kit de habitación incluye un Voltic FrostLine (termostato), un Voltic Switch (contactor), sensores PIR de presencia para dormitorio y baño, y sensores de contacto para ventana y puerta. El VolticHub es infraestructura compartida de la planta, no un Hub por habitación: como referencia, cada Hub puede gestionar aproximadamente 150 dispositivos y se recomienda asignarle 10–15 habitaciones de esa misma planta. Cada kit de habitación está preconfigurado para una habitación concreta y no puede intercambiarse.
   </Accordion>
 
   <Accordion title="¿Puedo intercambiar kits entre habitaciones?">
@@ -20,11 +20,15 @@ Encuentra aquí las respuestas a las dudas más comunes sobre el sistema Voltic 
   </Accordion>
 
   <Accordion title="¿Por qué debo dejar libre el canal 11 de Wi-Fi?">
-    El sistema Zigbee de Voltic opera en la banda de 2,4 GHz, en la misma frecuencia que el canal 11 de Wi-Fi. Si las APs del hotel usan ese canal, pueden producirse interferencias que afecten a la estabilidad de la red Zigbee y causen pérdidas de conectividad en los dispositivos.
+    El Hub utiliza por defecto el canal Zigbee 25, que puede solaparse con el canal 11 de Wi-Fi. Configura los puntos de acceso del hotel para evitar el canal 11 y reducir colisiones e interferencias que podrían afectar a la estabilidad de la red Zigbee.
   </Accordion>
 
   <Accordion title="¿Con qué modelos de fan coil es compatible el Voltic FrostLine?">
-    El Voltic FrostLine es compatible con fan coils de 2 tubos / 2 vías. También es compatible con válvulas de 3 vías. La alimentación del termostato es exclusivamente 230V AC: no conectes válvulas de 12V o 24V. Consulta la [guía de instalación del FrostLine](/instalacion/voltic-frostline) para el esquema de conexión.
+    El Voltic FrostLine puede utilizarse con fan coils de 2 tubos, fan coils de 4 tubos y combinaciones de fan coil con suelo radiante hidráulico, además de válvulas de 3 vías cuando el esquema lo contempla. La alimentación del termostato es exclusivamente 230V AC: no conectes válvulas de 12V o 24V. La conexión exacta depende de la versión y del proyecto; consulta la [matriz de compatibilidad](/frostline/compatibilidad) antes de cablear.
+  </Accordion>
+
+  <Accordion title="¿Puedo usar FrostLine fuera de un hotel?">
+    Sí. FrostLine también se vende como termostato independiente para viviendas y puede vincularse a un VolticHub o a un Hub Zigbee compatible con Tuya mediante Tuya Smart / Smart Life. Consulta la [guía de funcionamiento en viviendas](/frostline/funcionamiento) y el procedimiento de vinculación del Hub elegido.
   </Accordion>
 
   <Accordion title="¿Qué hace el modo ECO?">
@@ -40,7 +44,7 @@ Encuentra aquí las respuestas a las dudas más comunes sobre el sistema Voltic 
   </Accordion>
 
   <Accordion title="¿Cuánto puedo ahorrar con Voltic?">
-    Los hoteles que operan correctamente el sistema Voltic pueden alcanzar ahorros energéticos de hasta un 30% en habitaciones. Los resultados reales pueden variar según el tipo de edificio, la orientación de las habitaciones, las condiciones climáticas y los hábitos de uso de los huéspedes.
+    Los hoteles que operan correctamente el sistema Voltic pueden alcanzar ahorros energéticos de hasta un 30% en habitaciones. Es un dato interno de Voltic; consulta [voltic.es](https://voltic.es) para más información. Los resultados reales pueden variar según el tipo de edificio, la orientación de las habitaciones, las condiciones climáticas y los hábitos de uso de los huéspedes.
   </Accordion>
 
   <Accordion title="¿Cómo fijo los sensores de contacto de forma duradera?">

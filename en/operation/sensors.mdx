@@ -1,0 +1,52 @@
+---
+title: "How Sensors Work in Voltic Smart Room Control"
+sidebarTitle: "Sensors"
+description: "Discover how Voltic presence and window sensors automate HVAC control to improve your hotel's energy efficiency."
+---
+
+The Voltic system uses smart sensors to automate room operation and improve energy efficiency. This page explains how each type of sensor works and what happens when they are triggered.
+
+## Presence sensor (PIR)
+
+The PIR sensor detects whether there are people in the room or bathroom.
+
+**Typical location:**
+
+- Central area of the bedroom (ceiling)
+- Central area of the bathroom (ceiling)
+
+**Functions:**
+
+- Activate or deactivate HVAC based on room occupancy
+- Optimize energy consumption by avoiding conditioning empty spaces
+- Eliminate the need for traditional key card systems
+
+In **ECO mode**, if no presence is detected for the configured time (default 5 minutes), the HVAC turns off automatically. In **COMFORT mode**, the room maintains a setpoint temperature even if no one is present.
+
+## Window sensor (contact)
+
+The contact sensor detects window openings in the room.
+
+**How it works:**
+
+When a window opening is detected, the system prevents the HVAC from running unnecessarily and prevents energy losses. The HVAC turns off automatically according to the time configured in the Control Panel, under Automations, in Automation Times, in the Window section.
+
+![Automation times configuration — Window](https://r2.voltic.es/media/guia-buenas-practicas/control-panel/control-panel-window.webp)
+
+This mechanism prevents common situations such as conditioning a room with an open window.
+
+<Note>
+  Both ECO mode and COMFORT mode require the window to remain closed for the thermostat to operate.
+</Note>
+
+## Best practices
+
+<Warning>
+  Sensors are designed to optimize system operation. Manipulating or blocking them can affect energy efficiency, automation, and guest comfort.
+</Warning>
+
+## Related articles
+
+- [ECO and COMFORT modes](/en/operation/operating-modes)
+- [PIR presence sensors: installation](/en/installation/presence-sensors)
+- [Contact sensors: installation](/en/installation/contact-sensors)

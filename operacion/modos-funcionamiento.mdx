@@ -6,6 +6,8 @@ description: "Aprende a configurar y usar los modos ECO y CONFORT del sistema Vo
 
 El sistema Voltic Smart Room Control dispone de dos modos de operación que ajustan automáticamente el comportamiento de la climatización según la ocupación de la habitación: el modo ECO y el modo CONFORT.
 
+En cada habitación, el **Voltic FrostLine** aplica la consigna y controla la válvula o válvulas y las velocidades del fan coil según el esquema aprobado. Consulta la [guía de operación de FrostLine en hoteles](/operacion/voltic-frostline-hotel) para el flujo de supervisión y mantenimiento por habitación.
+
 <Note>
   El correcto funcionamiento del sistema depende de: instalación adecuada del sistema, configuración inicial correcta y uso operativo adecuado por parte del hotel. Los valores de ahorro energético son estimaciones basadas en condiciones operativas estándar y pueden variar según el tipo de edificio, la orientación de las habitaciones, las condiciones climáticas, los hábitos de uso de los huéspedes y la configuración operativa del hotel.
 </Note>
@@ -18,13 +20,24 @@ El sistema Voltic Smart Room Control dispone de dos modos de operación que ajus
 
 ![Configuración de tiempos de automatización — Ventana](https://r2.voltic.es/media/guia-buenas-practicas/control-panel/control-panel-window.webp)
 
+## Tabla de estados
+
+La siguiente tabla resume qué ocurre según el modo seleccionado y las señales de la habitación. Los temporizadores de presencia y ventana se configuran en el Panel de Control.
+
+| Modo seleccionado | Ventana | Presencia | Resultado |
+| --- | --- | --- | --- |
+| ECO | Cerrada | Detectada | La climatización funciona según la consigna ECO. |
+| ECO | Cerrada | No detectada durante el temporizador | La climatización se apaga al finalizar el temporizador de presencia (5 minutos por defecto). |
+| CONFORT | Cerrada | Detectada o no detectada | La climatización mantiene la consigna de confort configurada. |
+| ECO o CONFORT | Abierta durante el temporizador configurado | Cualquiera | La climatización se desactiva al finalizar el temporizador de ventana. |
+
 ## Modo ECO
 
 El modo ECO prioriza la **eficiencia energética**, reduciendo el funcionamiento de la climatización cuando la habitación no está ocupada. Es el **modo recomendado para la operación habitual del hotel**.
 
 ### Funcionamiento
 
-El sistema detecta la ausencia del huésped mediante sensores. Si no se detecta presencia durante **5 minutos**, el aire acondicionado se apaga automáticamente. Este intervalo puede modificarse desde Panel de Control, en Automatizaciones, en Tiempos de Automatización, en la sección Presencia.
+El sistema detecta la ausencia del huésped mediante sensores. Si el modo seleccionado es ECO y no se detecta presencia durante **5 minutos**, el aire acondicionado se apaga automáticamente. Este intervalo puede modificarse desde Panel de Control, en Automatizaciones, en Tiempos de Automatización, en la sección Presencia.
 
 ![Configuración de tiempos de automatización — Presencia](https://r2.voltic.es/media/guia-buenas-practicas/control-panel/control-panel-pir.webp)
 
@@ -85,3 +98,4 @@ Recomendado para habitaciones con alta exposición solar, en periodos de tempera
 
 - [Temperaturas recomendadas](/operacion/temperaturas-recomendadas)
 - [Cómo funcionan los sensores](/operacion/sensores)
+- [Operar FrostLine en un hotel](/operacion/voltic-frostline-hotel)
