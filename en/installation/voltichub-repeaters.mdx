@@ -49,6 +49,29 @@ The VolticHub is the coordinator of the Zigbee network. Its correct installation
   Always connect the RJ45 before the power supply. If you reverse the order, the Hub may boot in Wi-Fi mode even if Ethernet is available.
 </Note>
 
+## Local operation without Internet
+
+The VolticHub manages Zigbee communication and room automations locally. Therefore, the system can continue operating even when the Hub has no Internet access. A **communication error** shown for a room in the platform does not necessarily mean that the system has stopped working.
+
+Internet access allows rooms to be viewed and controlled from [app.voltic.es](https://app.voltic.es), as well as their information to be received by the platform.
+
+## Diagnosing an offline Hub
+
+<Steps>
+  <Step title="Physically check the power and RJ45 cables">
+    Go to the Hub installation location and verify that both the power cable and the network cable are properly connected. If the Ethernet RJ45 lights are blinking, there is a network link and activity: continue with step 2 to validate that the Hub and local automations are working. If the lights are not on, continue with step 3.
+  </Step>
+  <Step title="If the RJ45 lights blink, validate local operation">
+    Access a room associated with the Hub and check that the expected behavior occurs: when presence is detected, the contactor enables power to the lighting and TV lines, and opening the window disables HVAC according to the configured delay. If everything responds correctly, the Hub and its local automations are working; if the platform still shows no information, contact the hotel's IT service to review the platform connection. If an automation does not respond, there may be a Hub system issue: contact Voltic Support.
+  </Step>
+  <Step title="If the RJ45 lights are off, check the power supply">
+    Disconnect the Hub power and connect its USB-C cable to a mobile phone as an initial check of the power supply and cable. If the phone charges, continue with step 4 to check the network; this test alone does not rule out a fault in the Hub connector or electronics. If it does not charge, check the outlet, power supply, and power cable. After correcting the issue, repeat step 1; if power cannot be restored, contact Voltic Support.
+  </Step>
+  <Step title="If the phone charges, check the network with the hotel's IT service">
+    Ask IT to check whether the Hub appears in their system. If it does not, they must check the network point where it is connected and confirm that the device is not blocked. After any correction, repeat step 1 and then step 2. If the Hub appears correctly but all rooms remain disconnected or show a communication error, contact Voltic Support.
+  </Step>
+</Steps>
+
 ## Connection diagram
 
 ![VolticHub - Connection diagram](https://r2.voltic.es/media/installation-docs-assets/voltichub/voltichub_scheme.webp)
