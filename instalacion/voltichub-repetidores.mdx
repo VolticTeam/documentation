@@ -6,6 +6,10 @@ description: "Conecta y monta el VolticHub y los repetidores Zigbee correctament
 
 El VolticHub es el coordinador de la red Zigbee y se comunica inalámbricamente con los sensores y actuadores de las habitaciones. Su instalación correcta es fundamental para garantizar la conectividad de todos los dispositivos de la planta. Instálalo siempre antes de montar los dispositivos de cada habitación.
 
+<Note>
+  La topología recomendada es un Hub por planta: aproximadamente 10–15 habitaciones y hasta unos 150 dispositivos por Hub como referencia. Las habitaciones deben permanecer en la misma planta; utiliza repetidores o un Hub adicional si el estudio de cobertura lo requiere.
+</Note>
+
 <Warning>
   Este paso es el primero y más crítico de toda la instalación. Sin el Hub correctamente conectado, ningún sensor ni actuador de la planta funcionará.
 </Warning>
@@ -27,6 +31,10 @@ El VolticHub es el coordinador de la red Zigbee y se comunica inalámbricamente 
 </CardGroup>
 
 ## Conexión del VolticHub
+
+<Warning>
+  La alimentación es de 230 V. La conexión debe realizarla personal electricista cualificado, con el circuito aislado, bloqueado y verificado, y conforme a la normativa local.
+</Warning>
 
 <Steps>
   <Step title="Conecta primero el cable RJ45">
@@ -51,13 +59,13 @@ La conexión a Internet permite visualizar y controlar las habitaciones desde [a
 
 <Steps>
   <Step title="Comprueba físicamente la alimentación y el cable RJ45">
-    Ve hasta el lugar donde está instalado el Hub y verifica que tanto el cable de alimentación como el cable de red están correctamente enchufados. Si las luces del conector Ethernet RJ45 están parpadeando, el Hub está encendido y tiene un enlace de red válido: continúa con el paso 2. Si las luces no están encendidas, continúa con el paso 3.
+    Ve hasta el lugar donde está instalado el Hub y verifica que tanto el cable de alimentación como el cable de red están correctamente enchufados. Si las luces del conector Ethernet RJ45 están parpadeando, hay enlace y actividad de red: continúa con el paso 2 para validar que el Hub y las automatizaciones funcionan localmente. Si las luces no están encendidas, continúa con el paso 3.
   </Step>
   <Step title="Si las luces RJ45 parpadean, valida el funcionamiento local">
     Accede a una habitación asociada al Hub y comprueba que el comportamiento es el esperado: al detectar presencia, el contactor habilita la alimentación de las líneas de iluminación y TV, y al abrir la ventana la climatización se desactiva según el tiempo configurado. Si todo responde correctamente, el Hub y las automatizaciones locales funcionan; si la plataforma sigue sin mostrar información, contacta con el servicio de IT del hotel para revisar la conexión con la plataforma. Si alguna automatización no responde, puede existir un problema en el sistema del Hub: avisa al centro de soporte de Voltic.
   </Step>
   <Step title="Si las luces RJ45 no están encendidas, comprueba la alimentación">
-    Desconecta la alimentación del Hub y conecta su cable USB-C a un teléfono móvil. Si el móvil carga, puedes descartar inicialmente un problema de alimentación y continúa con el paso 4. Si no carga, revisa el enchufe, la fuente y el cable de alimentación del Hub. Después de corregirlo, repite el paso 1; si no consigues restablecer la alimentación, contacta con soporte Voltic.
+    Desconecta la alimentación del Hub y conecta su cable USB-C a un teléfono móvil como comprobación inicial de la fuente y el cable. Si el móvil carga, continúa con el paso 4 para revisar la red; esta prueba no descarta por sí sola un fallo del conector o de la electrónica del Hub. Si no carga, revisa el enchufe, la fuente y el cable de alimentación. Después de corregirlo, repite el paso 1; si no consigues restablecer la alimentación, contacta con soporte Voltic.
   </Step>
   <Step title="Si el móvil carga, revisa la red con el servicio de IT del hotel">
     Solicita a IT que compruebe si el Hub aparece en su sistema. Si no aparece, deben revisar el punto de red donde está conectado y confirmar que no existe ningún bloqueo para ese dispositivo. Tras cualquier corrección, repite el paso 1 y después el paso 2. Si el Hub aparece correctamente pero todas las habitaciones siguen desconectadas o muestran un error de comunicación, contacta con soporte Voltic.
